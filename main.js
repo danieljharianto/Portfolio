@@ -1,4 +1,14 @@
 // main.js
+
+// mobile navigation toggle (header button)
+const menuToggle = document.getElementById('menu-toggle');
+const navElem = document.querySelector('nav');
+if (menuToggle && navElem) {
+  menuToggle.addEventListener('click', () => {
+    navElem.classList.toggle('open');
+  });
+}
+
 const grid = document.getElementById('projectGrid');
 
 projects.forEach((p) => {

@@ -78,50 +78,97 @@ const grid = document.getElementById('projectImageGrid');
 const imgs = p.images ? p.images : [];
 
 if (imgs.length > 0) {
-  const allSrcs = imgs.map(i => typeof i === 'string' ? i : i.src);
 
   grid.innerHTML = imgs.map((img, i) => {
+    const layout = typeof img === 'object' ? (img.layout || 'single') : 'single';
+
+    // ── DUO: 2 images side by side ──
+    if (layout === 'duo') {
+      const srcs    = img.srcs || [];
+      const title   = img.title || '';
+      const textRaw = img.text || '';
+      const text    = Array.isArray(textRaw)
+        ? textRaw.map(para => `<p class="image-block-text">${para}</p>`).join('')
+        : textRaw ? `<p class="image-block-text">${textRaw}</p>` : '';
+
+      return `
+        <div class="image-block image-block--duo">
+          <div class="image-block-duo-photos">
+            ${srcs.map((src, j) => `
+              <div class="grid-img-wrap" data-src="${src}">
+                <div class="grid-img-inner">
+                  <img src="${src}" alt="${title} ${j + 1}" />
+
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          ${title || text ? `
+            <div class="image-block-duo-desc">
+              ${title ? `<h4 class="image-block-title">${title}</h4>` : ''}
+              ${text}
+            </div>` : ''}
+        </div>
+      `;
+    }
+
+    // ── SINGLE: image + description side by side ──
     const src     = typeof img === 'string' ? img : img.src;
     const title   = typeof img === 'object' ? (img.title   || '') : '';
-    const text    = typeof img === 'object' ? (img.text    || '') : '';
-    const reverse = typeof img === 'object' ? (img.reverse || false) : false; 
+    const textRaw = typeof img === 'object' ? (img.text    || '') : '';
+    const reverse = typeof img === 'object' ? (img.reverse || false) : false;
+    const text    = Array.isArray(textRaw)
+      ? textRaw.map(para => `<p class="image-block-text">${para}</p>`).join('')
+      : textRaw ? `<p class="image-block-text">${textRaw}</p>` : '';
 
-    const photoCol = `                                                          
+    const photoCol = `
       <div class="image-block-photos">
-        <div class="grid-img-wrap" data-index="${i}">
+        <div class="grid-img-wrap" data-src="${src}">
           <div class="grid-img-inner">
             <img src="${src}" alt="${title || p.title}" />
-            
+
           </div>
         </div>
       </div>
-    `;                                                                          
+    `;
 
-    const descCol = `                                                           
+    const descCol = `
       <div class="image-block-desc">
         ${title ? `<h4 class="image-block-title">${title}</h4>` : ''}
-        ${text  ? `<p  class="image-block-text">${text}</p>`   : ''}
-      </div>
-    `;                                                                          
-
-    return `
-      <div class="image-block ${reverse ? 'image-block--reverse' : ''}">  
-        ${reverse ? descCol + photoCol : photoCol + descCol}               
+        ${text}
       </div>
     `;
+
+    return `
+      <div class="image-block ${reverse ? 'image-block--reverse' : ''}">
+        ${reverse ? descCol + photoCol : photoCol + descCol}
+      </div>
+    `;
+
   }).join('');
 
-  // lightbox
+  // ── Lightbox — collect all srcs across all layouts ──
+  // const allSrcs = [];
+  // imgs.forEach(img => {
+  //   if (typeof img === 'object' && img.layout === 'duo') {
+  //     (img.srcs || []).forEach(s => allSrcs.push(s));
+  //   } else {
+  //     const s = typeof img === 'string' ? img : img.src;
+  //     if (s) allSrcs.push(s);
+  //   }
+  // });
+
   // document.querySelectorAll('.grid-img-wrap').forEach((wrap) => {
   //   wrap.addEventListener('click', () => {
-  //     openLightbox(allSrcs, parseInt(wrap.dataset.index));
+  //     const src   = wrap.dataset.src;
+  //     const idx   = allSrcs.indexOf(src);
+  //     openLightbox(allSrcs, idx >= 0 ? idx : 0);
   //   });
   // });
 
 } else {
   grid.innerHTML = '';
 }
-
 
 // 10. Prev / Next navigation
 const prev = projects[index - 1];

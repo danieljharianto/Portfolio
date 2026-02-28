@@ -15,26 +15,33 @@ const projects = [
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
     images: [
       { src: "Image/Project_1/01_DH_4.228.png", 
-        title: "Aerial Territory Mapping",
+        title: "Demand History of Exotic Wood – Meranti",
         text: "Concession boundaries overlaid on forest cover loss data, tracing the corporate transformation of ancestral land.",   
-        reverse: false    
+        reverse: false,
+        layout: "single"
       },
       { src: "Image/Project_1/02_DH_4.228.png", 
         title: "Aerial Territory Mapping",
         text: "Concession boundaries overlaid on forest cover loss data, tracing the corporate transformation of ancestral land." ,  
-        reverse: true
+        reverse: true,
+        layout: "single"
       },
-      { src: "Image/Project_1/01_DH_4.228.png", 
-        title: "Aerial Territory Mapping",
-        text: "Concession boundaries overlaid on forest cover loss data, tracing the corporate transformation of ancestral land.",   
-        reverse: false    
+      {
+        layout: "duo",    
+        srcs: [
+          "Image/Project_1/03_DH_4.228.png",
+          "Image/Project_1/04_DH_4.228.png",
+        ],
+        title: "Site Conditions",
+        text: ["Two views of the same contested territory."],
       },
+      // { src: "Image/Project_1/02_DH_4.228.png", 
+      //   title: "Aerial Territory Mapping",
+      //   text: "Concession boundaries overlaid on forest cover loss data, tracing the corporate transformation of ancestral land." ,  
+      //   reverse: true
+      // },
     ],
-    imageCaption: {
-      title: "Seeding the Wetlands. Growing the Community",
-      text: "The Lower Ninth Ward's history has been largely entwined with the Bayou Bienvenue which borders north of the neighbourhood. This dense cypress swamp has been in decline since the mid-1900s..."
-      
-    },
+
   },
   {
     id: "02",
