@@ -81,6 +81,32 @@ if (imgs.length > 0) {
 
   grid.innerHTML = imgs.map((img, i) => {
     const layout = typeof img === 'object' ? (img.layout || 'single') : 'single';
+    
+    // ── FULL: one image full width + description below ──
+    if (layout === 'full') {
+      const src     = img.src || '';
+      const title   = img.title || '';
+      const textRaw = img.text || '';
+      const text    = Array.isArray(textRaw)
+        ? textRaw.map(para => `<p class="image-block-text">${para}</p>`).join('')
+        : textRaw ? `<p class="image-block-text">${textRaw}</p>` : '';
+
+      return `
+        <div class="image-block image-block--full">
+          <div class="grid-img-wrap" data-src="${src}">
+            <div class="grid-img-inner">
+              <img src="${src}" alt="${title || p.title}" />
+              
+            </div>
+          </div>
+          ${title || text ? `
+            <div class="image-block-full-desc">
+              ${title ? `<h4 class="image-block-title">${title}</h4>` : ''}
+              ${text}
+            </div>` : ''}
+        </div>
+      `;
+    }
 
     // ── DUO: 2 images side by side ──
     if (layout === 'duo') {

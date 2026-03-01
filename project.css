@@ -80,7 +80,7 @@
 ───────────────────────────────────────── */
 .project-cover {
   width: 100%;
-  max-height: 100vh;
+  max-height: 110vh;
   overflow: hidden;
 }
 
@@ -292,6 +292,8 @@
   text-align: left;
 }
 
+/* Duo: description — sticky so it stays visible while scrolling images */
+
 .image-block--duo {
   display: flex;
   flex-direction: column;
@@ -320,6 +322,54 @@
 @media (max-width: 600px) {
   .image-block-duo-photos {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── FULL layout — full width image + description below ── */
+.image-block--full {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 0;
+  align-items: center;
+  border-top: 1px solid var(--border);
+}
+
+.image-block--full .grid-img-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-block-full-desc {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-top: 0.5rem;
+}
+
+.image-block-full-desc .image-block-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.image-block-full-desc .image-block-text {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 860px) {
+  .image-block-full-desc {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
