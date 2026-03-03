@@ -931,4 +931,6 @@ nav a.nav-active { color: var(--white); }
 }
 
 
-
+a.logo {
+  text-decoration: none;
+}

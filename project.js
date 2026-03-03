@@ -73,6 +73,27 @@ document.getElementById('projectInfoBar').innerHTML = `
 // 8. Overview
 document.getElementById('projectOverview').innerHTML = `<p>${p.long}</p>`;
 
+// 8b. Prototype link
+const protoWrap = document.getElementById('projectPrototype');
+if (protoWrap) {
+  if (p.prototype) {
+    protoWrap.innerHTML = `
+      <div class="prototype-band">
+        <a href="${p.prototype.url}" class="prototype-link" target="_blank" rel="noopener">
+          ${p.prototype.label || 'Launch Prototype'} →
+        </a>
+      </div>
+    `;
+  } else {
+    protoWrap.innerHTML = '';
+  }
+}
+
+        // <div class="prototype-band-text">
+        //   <span class="prototype-label">Prototype</span>
+        //   <p class="prototype-desc">Try out the live version of this project.</p>
+        // </div>
+
 // 9. Image grid — extra images or placeholders
 const grid = document.getElementById('projectImageGrid');
 const imgs = p.images ? p.images : [];
@@ -211,3 +232,8 @@ document.getElementById('projectNav').innerHTML = `
       </a>` : ''}
   </div>
 `;
+
+// 11. Disable save 
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('contextmenu', e => e.preventDefault());
+});
