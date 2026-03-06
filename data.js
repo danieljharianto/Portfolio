@@ -193,6 +193,12 @@ const projects = [
         // title: "Full Width View",
         // text: ["Description that sits below the full-width image."],
       },
+                {
+        layout: "full",
+        src: "Image/Project_3/05_DH_Proj3.png",
+        // title: "Full Width View",
+        // text: ["Description that sits below the full-width image."],
+      },
 
 
 
@@ -475,14 +481,14 @@ const projects = [
        {
         layout: "full",
         src: "Image/Project_6/11_DH_Proj6.png",
-        title: "Mock Up Construction",
-        text: ["Using salvaged materials from the surrounding area, a 28 sqm mock-up house was built to demonstrate repair methods, helping residents understand the process successfully."],
+        title: "Lower Income Housing Resilience",
+        text: ["The three most common low-income housing typologies show varying flood resilience. The Overhang House survives up to 0.5 m, the Single Gable House up to 0.75 m, and the Concrete Slab House up to 1.25 m of water level rise. Elevating any of these structures by 0.5–1.25 m can significantly extend their survival threshold, offering a low-cost adaptive strategy against land subsidence and coastal flooding."],
       },
              {
         layout: "full",
         src: "Image/Project_6/12_DH_Proj6.png",
-        title: "Mock Up Construction",
-        text: ["Using salvaged materials from the surrounding area, a 28 sqm mock-up house was built to demonstrate repair methods, helping residents understand the process successfully."],
+        title: "Higher IncomeHousing Resilience",
+        text: ["The three 42 sqm typologies common among higher-income households show greater baseline resilience. Both the Multi Gable and Long House survive up to 0.5 m, while the Concrete Slab House performs significantly better at 1.75 m. Elevating by 1 m extends the first two to 2 m tolerance, and just 0.75 m of elevation pushes the concrete slab threshold to 2.25 m — well above projected flood scenarios."],
       },
       // {
       // layout: "duo",    
@@ -512,18 +518,80 @@ const projects = [
     id: "08",
     title: "Experimenting Gentle Density of  Tanah Abang TOD",
     italicWord: "TOD",
-    tags: ["p5.js", "Arduino", "Interactive"],
+    tags: ["Research", "C#","Java Script","Python"],
     desc: "Hardware-integrated tap-beat game with Arduino button inputs and PoseNet nose-tracking for gameplay control.",
-    long: "A physically embodied rhythm game that merges web audio, ml5.js PoseNet body tracking, and real Arduino buttons for tactile feedback.",
-    year: "2021",
+    long: "Affordable housing near transit in Jakarta is increasingly scarce due to rapid urbanization and limited housing diversity. This research proposes gentle density, combining missing-middle housing with selective high-rise development to support inclusive growth. Focusing on the Tanah Abang TOD, a parametric workflow in Rhino and Grasshopper evaluates transit access and affordability to generate housing typologies. ",
+    year: "2023",
+    prototype: {
+      url: "https://iopscience.iop.org/article/10.1088/1755-1315/1394/1/012022",
+      label: "Published Paper"  
+    },
     medium: "Computational Design",
-    image: "Image/Project_8/01_DH_Density.png",
-    video: "https://www.youtube.com/embed/QVvZqij31Ns",
-    location: "Soegijapranata Catholic University",
-    location: "Semarang, Indonesia",
+    image: "Image/Project_8/01_DH_Proj8.png",
+    location: "Jakarta, Indonesia",
     status: "Completed",
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
-    images: [],
+    images: [
+      { src: "Image/Project_8/04_DH_Proj8.png", 
+        title: "Missing Middle Housing",
+        text: "Jakarta's rapid population growth and Generation Z's rising dominance in the housing market expose a critical gap in the city's residential landscape. Caught between dense informal kampung settlements and large-scale high-rise developments, Jakarta lacks the gradations of scale, affordability, and tenure that a growing and diverse population demands. Missing middle housing, encompassing mid-scale typologies such as townhouses, low-rise apartments, and courtyard housing, offers a vital bridge between these two extremes, providing adaptable and affordable options for younger residents entering the market. Addressing this gap is central to building more equitable and livable urban neighborhoods across Jakarta.",   
+        reverse: false,
+        layout: "single"
+      },
+      {
+        layout: "full",
+        src: "Image/Project_8/03_DH_Proj8.png",
+      },
+      { src: "Image/Project_8/08_DH_Proj8.png", 
+        title: "Housing Model Generation",
+        text: "This model adopts an established method of generating building mass from a population density map (PDM), calculating building heights through empirical statistics on average area per person. By inputting forecasted population data into the building mass generation model, a three-dimensional master plan of the pilot project is produced, translating demographic projections directly into spatial form and enabling a data-driven approach to urban massing and density distribution.",   
+        reverse: true,
+        layout: "single"
+      },
+      // { src: "Image/Project_8/02_DH_Proj8.png", 
+      //   title: "Computational Workflow - Ramhan Island  Planning",
+      //   text: "Developed for Emaar, Ramhan Island centers on reconfiguring an existing reclaimed island into a high-end luxury destination. The computational workflow drives the redesign of the island's overall configuration — optimizing shoreline geometry, land use distribution, and built form placement to elevate the development's market positioning while delivering the spatial quality and exclusivity expected of a world-class luxury resort." ,  
+      //   reverse: false,
+      //   layout: "single"
+      // },
+      // { src: "Image/Project_6/06_DH_Proj6.png", 
+      //   title: "Mock Up Construction",
+      //   text: "Using salvaged materials from the surrounding area, a 28 sqm mock-up house was built to demonstrate repair methods, helping residents understand the process successfully.",   
+      //   reverse: true,
+      //   layout: "single"
+      // },
+      {
+        layout: "full",
+        src: "Image/Project_8/06_DH_Proj8.png",
+        title: "Design Quality Improvement",
+        text: ["Visibility analysis provides a means of geometrically describing the spaces and forms of a building as seen from a specific position. As such, it considers both fixed, building-related factors like space and form, as well as temporal, experiential ones like visibility and movement impact."],
+      },
+            {
+        layout: "full",
+        src: "Image/Project_8/07_DH_Proj8.png",
+        title: "Massing Quality Improvement",
+        text: ["Compactness is adopted as a core spatial metric to guide design quality across the plan. By measuring the shape property of all visible space relative to a circle, compactness identifies zones where an observer's spatial experience is continuous and consistent. Using the isoperimetric quotient at every point in the plan, areas scoring closer to 1 are prioritized in the design enhancement strategy, as they indicate more spatially coherent and perceptually comfortable environments for occupants and pedestrians alike."],
+      },
+            {
+        layout: "full",
+        src: "Image/Project_8/05_DH_Proj8.gif",
+      //   title: "Design Improvement Plan",
+      //   text: ["The design improvement strategy examines the balance between maintained units and saleable area, identifying opportunities to reorganize the residential program without sacrificing overall yield. Through iterative design testing, unit configurations are refined to maximize saleable keys while preserving the quality, exclusivity, and lifestyle amenities that define Ramhan Island's luxury offering."],
+       },
+       {
+        layout: "full",
+        src: "Image/Project_8/02_DH_Proj8.png",
+        // title: "Mock Up Construction",
+        // text: ["Using salvaged materials from the surrounding area, a 28 sqm mock-up house was built to demonstrate repair methods, helping residents understand the process successfully."],
+      },
+
+      { src: "Image/Project_8/09_DH_Proj8.png", 
+        title: "Procedural Design Iteration",
+        text: "The procedural design iteration synthesizes all parameters and goals into a unified generative workflow, where spatial metrics including visibility, compactness, and population density are continuously tested and refined across successive design cycles. Each iteration accommodates programmatic, environmental, and experiential targets simultaneously, allowing the design to evolve responsively toward a solution that balances density, liveability, and spatial quality. The result is a coherent built form that is not arrived at arbitrarily, but shaped and validated through a structured, data-informed design process.",   
+        reverse: true,
+        layout: "single"
+      },
+    ],
   },
   {
     id: "09",
@@ -540,8 +608,8 @@ const projects = [
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
     images: [
       { src: "Image/Project_9/09_DH_Proj9.png", 
-        title: "Research on the Building Typologies",
-        text: "Bedono, Coastal Demak, Central Java, consists of various housing typologies and sized developments that have been established throughout the years. The data collection was recorded based on the inhabitants’ interviews about how long they had settled in the place.",   
+        title: "Computational Workflow - Lulu Island  Planning",
+        text: "Developed for Eagle Hills, Lulu Island is envisioned as a high-end resort destination defined by signature architecture and curated waterfront living. The computational workflow integrates parametric design tools to optimize site planning, unit distribution, and landscape performance ensuring the island's built form responds coherently to its coastal context while meeting the programmatic and aesthetic ambitions of a world-class luxury development.",   
         reverse: false,
         layout: "single"
       },
@@ -550,14 +618,14 @@ const projects = [
         src: "Image/Project_9/03_DH_Proj9.png",
       },
       { src: "Image/Project_9/04_DH_Proj9.png", 
-        title: "Mitigation Plan and Execution",
-        text: "Due to limited municipal census data and residents’ lack of insurance or financial support, the renovation scheme prioritized severely sunken houses, especially those submerged by more than one meter.",   
+        title: "Economical Improvement Plan and Execution",
+        text: "The economical improvement strategy focuses on maximizing saleable area without compromising the quality of amenities or the resort experience. Through iterative computational analysis, the plan redistributes programmatic elements to reduce inefficiencies, consolidate shared infrastructure, and unlock additional developable area — all while preserving the signature character and consumer expectations central to Lulu Island's luxury positioning.",   
         reverse: true,
         layout: "single"
       },
       { src: "Image/Project_9/02_DH_Proj9.png", 
-        title: "Focus Group Discussion",
-        text: "Local government visited each damaged house in the focus area to assess and record settlement damage, with residents encouraged to report their own house conditions individually. After the mapping, the Head of the Hamlet convened a forum where family representatives shared ideas to improve housing and develop strategies to reduce the impacts of tidal floods." ,  
+        title: "Computational Workflow - Ramhan Island  Planning",
+        text: "Developed for Emaar, Ramhan Island centers on reconfiguring an existing reclaimed island into a high-end luxury destination. The computational workflow drives the redesign of the island's overall configuration — optimizing shoreline geometry, land use distribution, and built form placement to elevate the development's market positioning while delivering the spatial quality and exclusivity expected of a world-class luxury resort." ,  
         reverse: false,
         layout: "single"
       },
@@ -576,8 +644,8 @@ const projects = [
              {
         layout: "full",
         src: "Image/Project_9/05_DH_Proj9.png",
-        title: "Mock Up Construction",
-        text: ["Using salvaged materials from the surrounding area, a 28 sqm mock-up house was built to demonstrate repair methods, helping residents understand the process successfully."],
+        title: "Design Improvement Plan",
+        text: ["The design improvement strategy examines the balance between maintained units and saleable area, identifying opportunities to reorganize the residential program without sacrificing overall yield. Through iterative design testing, unit configurations are refined to maximize saleable keys while preserving the quality, exclusivity, and lifestyle amenities that define Ramhan Island's luxury offering."],
       },
       // {
       // layout: "duo",    
