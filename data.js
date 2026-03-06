@@ -157,7 +157,7 @@ const projects = [
     tags: ["C#", "Python","Grasshopper SDK","Digital Commisioning"],
     desc: "Grasshopper plug enabling real-time urban design and planning prototyping.",
     long: "OrangoPlan provides parametric tools to model, analyze, and visualize complex urban design workflows. It enables designers and planners to create adaptive street networks, land-use layouts, building massing, public space configurations, and infrastructure simulations.",
-    year: "2024 - Ongoing",
+    year: "2024",
     medium: "Software / Plugin",
     image: "Image/Project_3/01_DH_Proj3.png",
     prototype: {
