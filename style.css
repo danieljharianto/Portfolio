@@ -188,7 +188,7 @@ nav a:hover { color: var(--white); }
   letter-spacing: 0.03em;
   color: var(--white);
   padding-bottom: 1rem;
-  -webkit-text-stroke: 1.9px var(--white)
+  -webkit-text-stroke: 0.8px var(--white)
 }
 
 .hero-right {
