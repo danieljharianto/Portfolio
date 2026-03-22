@@ -67,7 +67,7 @@ document.getElementById('projectInfoBar').innerHTML = `
   <div class="project-info-item">
     <span class="detail-label">Status</span>
     <span class="detail-value">${p.status}</span>
-  </div>
+
 `;
 
 // 8. Overview

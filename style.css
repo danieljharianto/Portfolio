@@ -1,6 +1,6 @@
-/*
-  ── PP Font-face blocks ─────────────────────────────────────────────
-  Uncomment once PP Pangaia / PP Mori WOFF2 files are hosted locally.
+
+  /* ── PP Font-face blocks ─────────────────────────────────────────────
+  Uncomment once PP Pangaia / PP Mori WOFF2 files are hosted locally. */
 
   @font-face {
     font-family: 'PP Pangaia';
@@ -22,7 +22,7 @@
     src: url('/fonts/PPMori-SemiBold.woff2') format('woff2');
     font-weight: 500; font-style: normal; font-display: swap;
   }
-  ──────────────────────────────────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────── */
 
 /* ─────────────────────────────────────────
    RESET & TOKENS
@@ -34,19 +34,33 @@
 }
 
 :root {
-  --font-display: 'PP Pangaia', 'Fraunces', Georgia, serif;
+  --font-display: 'PP Mori', 'Fraunces', Georgia, serif;
   --font-body:    'PP Mori', 'Epilogue', system-ui, sans-serif;
 
-  --green:        #3d4e1f;
-  --green-deep:   #2c3816;
-  --green-accent: #7fa832;
-  --white:        #ffffff;
-  --bg:           #ffffff;
-  --bg2:          #f5f4f0;
-  --ink:          #1c2211;
-  --muted:        #7a7d72;
-  --light-grey:   #b0b0b0;
-  --border:       rgba(60, 78, 31, 0.12);
+  --green         : #3d4e1f; 
+  --green-deep    : #2c3816; 
+  --green-accent  : #7fa832; 
+  --white         : #ffffff; 
+  --bg            : #ffffff; 
+  --bg2           : #f5f4f0; 
+  --ink           : #1c2211; 
+  --muted         : #7a7d72; 
+  --light-grey    : #b0b0b0; 
+  --border        : rgba(60, 78, 31, 0.12);
+
+  /* --green:        #6b7a3a;
+  --green-deep:   #4a5528;
+  --green-accent: #c2d66b;
+
+  --white:        #fdfcf8;
+  --bg:           #fdfcf8;
+  --bg2:          #f3f1e8;
+
+  --ink:          #2a2e1d;
+  --muted:        #8c8f7a;
+  --light-grey:   #d0d0c8;
+
+  --border:       rgba(107, 122, 58, 0.16); */
 }
 
 html { scroll-behavior: smooth; }
@@ -242,7 +256,7 @@ nav a:hover { color: var(--white); }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 4rem 2.5rem 2rem;
+  padding: 2rem 2.5rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
   border-bottom: 1px solid var(--border);
@@ -266,74 +280,83 @@ nav a:hover { color: var(--white); }
 }
 
 /* ─────────────────────────────────────────
-   PROJECT GRID
+   PROJECT LIST
 ───────────────────────────────────────── */
 .projects {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 2.5rem 6rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card {
-  background: var(--white);
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  min-height: 32vh;
   cursor: pointer;
-  position: relative;
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
-  border: 1px solid var(--border);
-  transition:
-    transform     0.28s ease,
-    box-shadow    0.28s ease,
-    background    0.28s ease,
-    border-color  0.28s ease;
-  /* allow project-specific hover backgrounds via CSS variable */
-  /* default is light grey for all cards */
-  --hover-bg: #e6e3e3;
-  /* text color to use on hover (defaults to dark ink so it’s readable on grey) */
-  --hover-text: var(--ink);
+  background: var(--white);
+  transition: background 0.28s ease;
 }
 
 .project-card:hover {
-  /* use the project-specific hover color if provided */
   background: var(--bg2);
-  border-color: transparent;
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(29, 36, 15, 0.22);
 }
 
-/* Colour flips on hover */
-.project-card:hover .project-index             { color: var(--hover-text, rgba(255, 255, 255, 0.4)); }
-.project-card:hover .project-title             { color: var(--hover-text, var(--white)); }
-.project-card:hover .project-title em          { color: var(--green-accent); }
-.project-card:hover .project-desc              { color: var(--hover-text, rgba(255, 255, 255, 0.62)); }
-.project-card:hover .project-arrow             { color: var(--green-accent); }
-.project-card:hover .tag                       { border-color: rgba(61, 61, 61, 0.2); color: rgba(109, 109, 109, 0.6); }
-.project-card:hover .project-img-placeholder   { color: rgba(255, 255, 255, 0.4); }
+.project-card:hover .project-img {
+  transform: scale(1.025);
+}
 
-.project-index {
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: var(--muted);
-  margin-bottom: 1.5rem;
+.project-card:hover .project-card-title { color: var(--green-accent); }
+
+.project-card-left {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid var(--border);
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
   transition: color 0.28s;
+}
+
+.project-card-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.project-card-desc {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.project-card-right {
+  overflow: hidden;
+  position: relative;
 }
 
 .project-img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 1.5rem;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
 .project-img-placeholder {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  margin-bottom: 1.5rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,14 +366,6 @@ nav a:hover { color: var(--white); }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
-  transition: color 0.28s;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
 }
 
 .tag {
@@ -363,50 +378,7 @@ nav a:hover { color: var(--white); }
   border: 1px solid var(--border);
   color: var(--muted);
   border-radius: 2px;
-  transition: border-color 0.28s, color 0.28s;
 }
-
-.project-title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.18;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.65rem;
-  color: var(--ink);
-  transition: color 0.28s;
-}
-
-.project-title em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--green);
-  transition: color 0.28s;
-}
-
-.project-desc {
-  font-family: var(--font-body);
-  font-weight: 400;
-  color: var(--muted);
-  font-size: 12.5px;
-  line-height: 1.78;
-  margin-bottom: 1.6rem;
-  transition: color 0.28s;
-}
-
-.project-arrow {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  color: var(--green);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.28s, gap 0.2s;
-}
-
-.project-card:hover .project-arrow { gap: 0.9rem; }
 
 /* ─────────────────────────────────────────
    CTA BAND
@@ -663,13 +635,13 @@ footer {
 .hero-headline { animation: fadeUp 1s ease both 0.1s; }
 .hero-right    { animation: fadeUp 1s ease both 0.3s; }
 
-.project-card                  { animation: fadeUp 0.55s ease both; }
+.project-card                  { animation: fadeUp 0.6s ease both; }
 .project-card:nth-child(1)     { animation-delay: 0.05s; }
-.project-card:nth-child(2)     { animation-delay: 0.12s; }
-.project-card:nth-child(3)     { animation-delay: 0.19s; }
-.project-card:nth-child(4)     { animation-delay: 0.26s; }
-.project-card:nth-child(5)     { animation-delay: 0.33s; }
-.project-card:nth-child(6)     { animation-delay: 0.40s; }
+.project-card:nth-child(2)     { animation-delay: 0.15s; }
+.project-card:nth-child(3)     { animation-delay: 0.25s; }
+.project-card:nth-child(4)     { animation-delay: 0.35s; }
+.project-card:nth-child(5)     { animation-delay: 0.45s; }
+.project-card:nth-child(6)     { animation-delay: 0.55s; }
 
 /* ─────────────────────────────────────────
    SCROLLBAR
@@ -706,7 +678,10 @@ footer {
   nav.open                         { display: flex; }
   #menu-toggle                     { display: block; }
 
-  .section-header, .projects      { padding-left: 1.2rem; padding-right: 1.2rem; }
+  .section-header                 { padding-left: 1.2rem; padding-right: 1.2rem; }
+  .project-card                   { grid-template-columns: 1fr; min-height: unset; }
+  .project-card-left              { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 1.2rem; }
+  .project-card-right             { min-height: 45vw; }
   .modal-body                     { padding: 1.5rem; }
   .modal-details                  { grid-template-columns: 1fr 1fr; }
   .cta-band                       { flex-direction: column; align-items: flex-start; padding: 3rem 1.5rem; }
