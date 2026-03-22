@@ -11,7 +11,7 @@ const projects = [
     image: "Image/Project_10/01_DH_Proj10.png", 
     // video: "https://youtu.be/IunhfJIQ9HY?autoplay=1&mute=1",
     location: "Cambridge, MA",
-    status: "On Going",
+    status: "Ongoing",
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
     images: [
       { src: "Image/Project_10/02_DH_Proj10.png", 
@@ -228,7 +228,7 @@ const projects = [
       label: "Plugin Documentation"  
     },
     video: "https://www.youtube.com/embed/K9SeA-3_E0w?autoplay=1&mute=1",
-    location: "MIT SA+P",
+    location: "cambridge, MA",
     status: "Ongoing",
     color: "radial-gradient(ellipse at top left, #566830 0%, #2c3816 100%)",
     images: [
