@@ -2,7 +2,7 @@
   /* ── PP Font-face blocks ─────────────────────────────────────────────
   Uncomment once PP Pangaia / PP Mori WOFF2 files are hosted locally. */
 
-  @font-face {
+  /* @font-face {
     font-family: 'PP Pangaia';
     src: url('/fonts/PPPangaia-Bold.woff2') format('woff2');
     font-weight: 700; font-style: normal; font-display: swap;
@@ -11,7 +11,7 @@
     font-family: 'PP Pangaia';
     src: url('/fonts/PPPangaia-Regular.woff2') format('woff2');
     font-weight: 400; font-style: normal; font-display: swap;
-  }
+  } */
   @font-face {
     font-family: 'PP Mori';
     src: url('/fonts/PPMori-Regular.woff2') format('woff2');
@@ -182,12 +182,13 @@ nav a:hover { color: var(--white); }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 6vw, 9rem);
+  font-size: clamp(2.5rem, 6vw, 9rem);
   font-weight: 700;
   line-height: 0.93;
   letter-spacing: 0.03em;
   color: var(--white);
   padding-bottom: 1rem;
+  -webkit-text-stroke: 1.9px var(--white)
 }
 
 .hero-right {
