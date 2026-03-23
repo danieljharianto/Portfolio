@@ -228,7 +228,7 @@ const projects = [
       label: "Plugin Documentation"  
     },
     video: "https://www.youtube.com/embed/K9SeA-3_E0w?autoplay=1&mute=1",
-    location: "cambridge, MA",
+    location: "Cambridge, MA",
     status: "Ongoing",
     color: "radial-gradient(ellipse at top left, #566830 0%, #2c3816 100%)",
     images: [
