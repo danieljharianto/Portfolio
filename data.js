@@ -9,7 +9,7 @@ const projects = [
     year: "2026",
     medium: "Industrial Design / Game",
     image: "Image/Project_10/01_DH_Proj10.png", 
-    // video: "https://youtu.be/IunhfJIQ9HY?autoplay=1&mute=1",
+    video: "https://www.youtube.com/embed/3DzUXXrBslM?autoplay=1&mute=1",
     location: "Cambridge, MA",
     status: "Ongoing",
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
@@ -19,6 +19,12 @@ const projects = [
         text: "The game introduces an interactive system built using p5.js and a microcontroller to translate rhythmic inputs into real-time carbonation pressure.",   
         reverse: false,
         layout: "single"
+      },
+      {
+        layout: "full",
+        src: "Image/Project_10/01_DH_Proj10.png", 
+        // title: "Illicit Process During Extraction",
+        // text: "Extraction in West Borneo brings social and material devastation beyond forest loss. Dayak families face eviction, burned homes, destroyed tools, and illegal logging practices that evade detection. As exploitation deepens, communities turn to prayer and ritual, drawing spiritual resilience to endure and resist forces greater than their political and economic power.",
       },
       { src: "Image/Project_10/04_DH_Proj10.png", 
         title: "Man-Made Game Design",
