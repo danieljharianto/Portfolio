@@ -1,6 +1,47 @@
 const projects = [
+    //   {
+    // id: "01",
+    // title: "Common Ground",
+    // italicWord: "Ground",
+    // tags: ["ULI Competition", "Urban Design","Master Plan","Computational Design"],
+    // desc: "Urban Land Institute (ULI) Americas competition finalist proposing a master plan for the redevelopment of shopping center in Austin, Texas",
+    // // long: "Fizzy Frenzy is a rhythm-based game where players compete to build up maximum pressure inside a soda bottle. Players tap and shake controllers in a test of speed, focus, and resilience, with the outcome revealed when both bottles pop The game combines physical interaction with digital feedback, creating an engaging and competitive experience that celebrates the simple joy of opening a fizzy drink.",
+    // year: "2026",
+    // medium: "Finalist Proposal",
+    // image: "Image/Project_11/01_DH_Proj11.png", 
+    // // video: "https://www.youtube.com/embed/3DzUXXrBslM?autoplay=1&mute=1",
+    // location: "Austin, TX",
+    // status: "Ongoing",
+    // color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
+    // images: [
+    //   { src: "Image/Project_11/02_DH_Proj11.png", 
+    //     // title: "Rhythm Mechanics",
+    //     // text: "The game introduces an interactive system built using p5.js and a microcontroller to translate rhythmic inputs into real-time carbonation pressure.",   
+    //     reverse: false,
+    //     layout: "single"
+    //   },
+    //   { src: "Image/Project_11/03_DH_Proj11.png", 
+    //     // title: "Rhythm Mechanics",
+    //     // text: "The game introduces an interactive system built using p5.js and a microcontroller to translate rhythmic inputs into real-time carbonation pressure.",   
+    //     reverse: true,
+    //     layout: "single"
+    //   },
+    //   {
+    //     layout: "full",
+    //     src: "Image/Project_11/02.png", 
+    //     // title: "Illicit Process During Extraction",
+    //     // text: "Extraction in West Borneo brings social and material devastation beyond forest loss. Dayak families face eviction, burned homes, destroyed tools, and illegal logging practices that evade detection. As exploitation deepens, communities turn to prayer and ritual, drawing spiritual resilience to endure and resist forces greater than their political and economic power.",
+    //   },
+    //   { src: "Image/Project_11/04.png", 
+    //     // title: "Rhythm Mechanics",
+    //     // text: "The game introduces an interactive system built using p5.js and a microcontroller to translate rhythmic inputs into real-time carbonation pressure.",   
+    //     reverse: false,
+    //     layout: "single"
+    //   },
+    // ],
+    // },
     {
-    id: "01",
+    id: "02",
     title: "Fizzy Frenzy",
     italicWord: "Frenzy",
     tags: ["1D Game", "Product Design","P5.js","Arduino"],
@@ -47,11 +88,23 @@ const projects = [
       //   reverse: false,
       //   layout: "single"
       // },
+      // {
+      //   layout: "single",
+      //   src: "Image/Project_10/05_DH_Proj10_2.gif", 
+      //   title: "Tap on Rythm",
+      //   // text: "Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation.",
+      // },
+      // {
+      //   layout: "single",
+      //   src: "Image/Project_10/05_DH_Proj10_3.gif",
+      //   title: "Shake to Build Pressure",
+      //   // text: "Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation.",
+      // },
       //       {
-      //   layout: "full",
-      //   src: "Image/Project_1/03_DH_Proj1.png", 
-      //   title: "Dayak Cosmology and the Meaning of Nature",
-      //   text: "Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation.",
+      //   layout: "single",
+      //   src: "Image/Project_10/05_DH_Proj10_4.gif", 
+      //   title: "Twist to Reveal the Winner",
+      //   // text: "Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation.",
       // },
       //       { src: "Image/Project_1/04_DH_Proj1.png", 
       //   title: "Disputed Extraction Site",
@@ -70,7 +123,7 @@ const projects = [
     ],
   },
   {
-    id: "02",
+    id: "03",
     title: "When Forests Become Frontiers",
     italicWord: "Frontiers",
     tags: ["Research", "Environmental Justice", "Borneo", "Public Empowerment"],
@@ -139,7 +192,7 @@ const projects = [
     ],
   },
   {
-    id: "03",
+    id: "04",
     title: "South Bronx Pedestrian Atlas",
     italicWord: "Atlas",
     tags: ["Web Mapping", "Mapbox GL JS", "C#", "JavaScript","Digital Commisioning"],
@@ -220,7 +273,7 @@ const projects = [
     ],
   },
   {
-    id: "04",
+    id: "05",
     title: "OrangoPlan — Grasshopper Plugin",
     italicWord: "Plugin",
     tags: ["C#", "Python","Grasshopper SDK","Digital Commisioning"],
@@ -274,7 +327,7 @@ const projects = [
     ],
   },
   {
-    id: "05",
+    id: "06",
     title: "Smoked County Relish",
     italicWord: "Relish",
     tags: ["Thesis", "C#","Java Script","Python","Building Science","Discrete Math"],
@@ -360,7 +413,7 @@ const projects = [
     ],
   },
   {
-    id: "06",
+    id: "07",
     title: "Jakarta TOD-POD Implementation",
     italicWord: "Implementation",
     tags: ["Research",,"C#", "Python", "Urban Mobility", "Public Empowerment"],
@@ -421,12 +474,12 @@ const projects = [
     ],
   },
   {
-    id: "07",
+    id: "08",
     title: "Indonesia New Capital City Urban Design Guidelines",
     italicWord: "Guidelines",
     tags: ["Research", "C#", "Python", "Planning Modelling"],
-    desc: "Hardware-integrated tap-beat game with Arduino button inputs and PoseNet nose-tracking for gameplay control.",
-    long: "A physically embodied rhythm game that merges web audio, ml5.js PoseNet body tracking, and real Arduino buttons for tactile feedback.",
+    desc: "Urban guidelines that integrate urban analytics from precinct to parcel scale to drive performance-based into future-ready development.",
+    long: "The Government Core (KIPP) Urban Design Development spans 6,671 hectares and is organized into three sub-planning areas: 1A (Government Center), 1B (Education Center), and 1C (Wellness Center), structured around an archipelago-inspired urban form. The plan integrates modeling, visualization, and analytical tools to support decision-making, with the Nusantara Urban Design Guidelines guiding development from precinct to parcel scale to ensure alignment with performance targets and a future-ready city vision.",
     year: "2021",
     medium: "Computational Design",
     image: "Image/Project_7/07_DH_Proj7.png",
@@ -504,7 +557,7 @@ const projects = [
     ],
   },
   {
-    id: "08",
+    id: "09",
     title: "Reclaiming Necessity Coastal Demak",
     italicWord: "Coastal Demak",
     tags: ["Research", "C#","Java Script","Python","Building Science","Discrete Math"],
@@ -584,7 +637,7 @@ const projects = [
   },
 
   {
-    id: "09",
+    id: "10",
     title: "Experimenting Gentle Density of  Tanah Abang TOD",
     italicWord: "TOD",
     tags: ["Research", "C#","Java Script","Python"],
@@ -663,7 +716,7 @@ const projects = [
     ],
   },
   {
-    id: "10",
+    id: "11",
     title: "Middle East Strategic",
     italicWord: "Strategic",
     tags: ["Research", "C#", "Python", "Planning Modelling"],
