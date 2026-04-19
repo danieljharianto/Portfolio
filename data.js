@@ -339,7 +339,7 @@ const projects = [
       url: "https://www.designboom.com/architecture/daniel-jansen-harianto-the-smoked-county-relish-thesis-project-indonesia-09-09-2022/",
       label: "Published Media"  
     },
-    image: "Image/Project_4/01_DH_Proj4.png",
+    image: "Image/Project_4/13_DH_Proj4.png",
     video: "https://www.youtube.com/embed/QVvZqij31Ns?autoplay=1&mute=1",
     location: "Soegijapranata Catholic University",
     location: "Semarang, Indonesia",
