@@ -414,67 +414,6 @@ const projects = [
   },
   {
     id: "07",
-    title: "Jakarta TOD-POD Implementation",
-    italicWord: "Implementation",
-    tags: ["Research",,"C#", "Python", "Urban Mobility", "Public Empowerment"],
-    desc: "Creating a TOD-POD template to better shape urban mobility within the Jakarta Metropolitan Area.",
-    long: "The Jakarta metropolitan area (Jabodetabek) consists of Jakarta, Bogor, Depok, Tangerang, and Bekasi, covering over 6,438 sq km, and it is considered the second largest metropolitan area in the world after the Tokyo metropolitan area in Japan (14,034 sq km). The metropolitan area is home to a population of 40 million people in 2022.There has been relatively little focus on the ‘implementation’ of strategic imperatives, with most urban development and transit initiatives emerging through either reactive or speculative means. Therefore, the city’s planning administration needs to strengthen its understanding and knowledge in planning Transit-Oriented Development (TOD) and Pedestrian-Oriented Design (POD).",
-    year: "2023",
-    medium: "Computational Design",
-    image: "Image/Project_5/01_DH_Proj5.png",
-    location: "Soegijapranata Catholic University",
-    location: "Jakarta, Indonesia",
-    status: "Completed",
-    color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
-    images: [
-      { src: "Image/Project_5/07_DH_Proj5.png", 
-        title: "Public Driven Engagement",
-        text: "This activity included semi-structured interviews with the Head of the Neighborhood to explore economic drivers that could create opportunities for low-income residents and strengthen their adaptive capacity around the TOD-POD. In collaboration with DKI Jakarta agencies, the TOD-POD is planned as a neighborhood center for East Jakarta, with its role in the activity hierarchy shaping future real estate development and positioning.",   
-        reverse: false,
-        layout: "single"
-      },
-      // { src: "Image/Project_5/03_DH_Proj5.png", 
-      //   title: "Disputed Extraction Site",
-      //   text: "For centuries, Dayak communities governed land through adat systems. Although the 1960 Agrarian Law recognized customary rights, weak enforcement enabled state backed concessions. In Sabar Bubu, severe deforestation and forced displacement followed, affecting thousands. The case exposes how legal ambiguity and extraction undermine Indigenous territory and belonging." ,  
-      //   reverse: true,
-      //   layout: "single"
-      // },
-            { src: "Image/Project_5/08_DH_Proj5.png", 
-        title: "User Experience Initiative",
-        text: "To facilitate seamless footpath connectivity between public transport modes and public facilities such as markets, schools, parks, and others, the TOD-POD must provide a continuous guiding block path and a standardized ramp." ,  
-        reverse: true,
-        layout: "single"
-      },
-                  {
-        layout: "full",
-        src: "Image/Project_5/03_DH_Proj5.png",
-        title: "Masterplan Strategy",
-        text: ["Located in East Jakarta (Klender), the pilot study covers an 800 m radius around Klender (Lama) Station, with a 400 m core focus area for development. The goal is to create the densest, mixed-use zone that supports walking and cycling, with select plots planned for higher density to meet future demand."],
-      },
-
-            {
-        layout: "full",
-        src: "Image/Project_5/05_DH_Proj5.png",
-        // title: "Full Width View",
-        // text: ["Description that sits below the full-width image."],
-      },
-            {
-        layout: "full",
-        src: "Image/Project_5/06_DH_Proj5.png",
-        // title: "Full Width View",
-        // text: ["Description that sits below the full-width image."],
-      },
-      {
-        layout: "full",
-        src: "Image/Project_5/02_DH_Proj5.png",
-        // title: "Full Width View",
-        // text: ["Description that sits below the full-width image."],
-      },
-
-    ],
-  },
-  {
-    id: "08",
     title: "Indonesia New Capital City Urban Design Guidelines",
     italicWord: "Guidelines",
     tags: ["Research", "C#", "Python", "Planning Modelling"],
@@ -556,6 +495,68 @@ const projects = [
 
     ],
   },
+  {
+    id: "08",
+    title: "Jakarta TOD-POD Implementation",
+    italicWord: "Implementation",
+    tags: ["Research",,"C#", "Python", "Urban Mobility", "Public Empowerment"],
+    desc: "Creating a TOD-POD template to better shape urban mobility within the Jakarta Metropolitan Area.",
+    long: "The Jakarta metropolitan area (Jabodetabek) consists of Jakarta, Bogor, Depok, Tangerang, and Bekasi, covering over 6,438 sq km, and it is considered the second largest metropolitan area in the world after the Tokyo metropolitan area in Japan (14,034 sq km). The metropolitan area is home to a population of 40 million people in 2022.There has been relatively little focus on the ‘implementation’ of strategic imperatives, with most urban development and transit initiatives emerging through either reactive or speculative means. Therefore, the city’s planning administration needs to strengthen its understanding and knowledge in planning Transit-Oriented Development (TOD) and Pedestrian-Oriented Design (POD).",
+    year: "2023",
+    medium: "Computational Design",
+    image: "Image/Project_5/01_DH_Proj5.png",
+    location: "Soegijapranata Catholic University",
+    location: "Jakarta, Indonesia",
+    status: "Completed",
+    color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
+    images: [
+      { src: "Image/Project_5/07_DH_Proj5.png", 
+        title: "Public Driven Engagement",
+        text: "This activity included semi-structured interviews with the Head of the Neighborhood to explore economic drivers that could create opportunities for low-income residents and strengthen their adaptive capacity around the TOD-POD. In collaboration with DKI Jakarta agencies, the TOD-POD is planned as a neighborhood center for East Jakarta, with its role in the activity hierarchy shaping future real estate development and positioning.",   
+        reverse: false,
+        layout: "single"
+      },
+      // { src: "Image/Project_5/03_DH_Proj5.png", 
+      //   title: "Disputed Extraction Site",
+      //   text: "For centuries, Dayak communities governed land through adat systems. Although the 1960 Agrarian Law recognized customary rights, weak enforcement enabled state backed concessions. In Sabar Bubu, severe deforestation and forced displacement followed, affecting thousands. The case exposes how legal ambiguity and extraction undermine Indigenous territory and belonging." ,  
+      //   reverse: true,
+      //   layout: "single"
+      // },
+            { src: "Image/Project_5/08_DH_Proj5.png", 
+        title: "User Experience Initiative",
+        text: "To facilitate seamless footpath connectivity between public transport modes and public facilities such as markets, schools, parks, and others, the TOD-POD must provide a continuous guiding block path and a standardized ramp." ,  
+        reverse: true,
+        layout: "single"
+      },
+                  {
+        layout: "full",
+        src: "Image/Project_5/03_DH_Proj5.png",
+        title: "Masterplan Strategy",
+        text: ["Located in East Jakarta (Klender), the pilot study covers an 800 m radius around Klender (Lama) Station, with a 400 m core focus area for development. The goal is to create the densest, mixed-use zone that supports walking and cycling, with select plots planned for higher density to meet future demand."],
+      },
+
+            {
+        layout: "full",
+        src: "Image/Project_5/05_DH_Proj5.png",
+        // title: "Full Width View",
+        // text: ["Description that sits below the full-width image."],
+      },
+            {
+        layout: "full",
+        src: "Image/Project_5/06_DH_Proj5.png",
+        // title: "Full Width View",
+        // text: ["Description that sits below the full-width image."],
+      },
+      {
+        layout: "full",
+        src: "Image/Project_5/02_DH_Proj5.png",
+        // title: "Full Width View",
+        // text: ["Description that sits below the full-width image."],
+      },
+
+    ],
+  },
+  
   {
     id: "09",
     title: "Reclaiming Necessity Coastal Demak",
