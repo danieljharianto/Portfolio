@@ -73,15 +73,25 @@ const projects = [
         reverse: true,
         layout: "single"
       },
-      // {
-      //   layout: "duo",    
-      //   srcs: [
-      //     "Image/Project_1/03_DH_Proj1.png",
-      //     "Image/Project_1/04_DH_Proj1.png",
-      //   ],
-      //   title: "Dayak Cosmology and the Meaning of Nature",
-      //   text: ["Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation."],
-      // },
+      {
+        layout: "duo",    
+        srcs: [
+          { src:"Image/Project_10/05_DH_Proj10_1.gif", title: 'Clink to Start', text: 'A magnetic reed switch or Hall effect sensor connected to an Arduino detects when a bottle is struck or clinked. The impact causes a magnet (embedded in or attached to the bottle cap or neck) to pass near the sensor, triggering a digital input pin on the Arduino. ' },
+          { src:"Image/Project_10/05_DH_Proj10_2.gif", title: 'Tap on Rhythm', text: 'A momentary arcade push button wired to an Arduino digital input pin detects when a player presses the button. Each tap triggers a rising edge signal that the microcontroller reads and timestamps.' },
+          ],
+        // title: "Dayak Cosmology and the Meaning of Nature",
+        // text: ["Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation."],
+      },
+      {
+        layout: "duo",    
+        srcs: [
+          { src:"Image/Project_10/05_DH_Proj10_3.gif", title: 'Shake to Build Pressure', text: 'A tilt sensor detects angular displacement and orientation changes. As a user tilts or rocks the device/object in different directions, the sensor triggers when the tilt angle exceeds a threshold and accumulate a "pressure" meter.' },
+          { src:"Image/Project_10/05_DH_Proj10_4.gif", title: 'Twist to Reveal the Winner', text: 'A rotary encoder or potentiometer connected to an Arduino detects rotational movement. As a user twists the device, the sensor generates pulses or analog signals that the microcontroller interprets to determine the rotation angle and direction.' },
+        ],
+        // title: "Dayak Cosmology and the Meaning of Nature",
+        // text: ["Dayak cosmology unites land, spirits, and humans within interconnected cosmic realms. The sacred meranti tree links physical and ancestral worlds and is used only for essential needs. Through ritual sacrifice and liver divination, territorial decisions align with cosmic balance, making forest defense both political resistance and sacred obligation."],
+      },
+
       // { src: "Image/Project_1/05_DH_Proj1.png", 
       //   title: "Illicit Process During Extraction",
       //   text: "Extraction in West Borneo brings social and material devastation beyond forest loss. Dayak families face eviction, burned homes, destroyed tools, and illegal logging practices that evade detection. As exploitation deepens, communities turn to prayer and ritual, drawing spiritual resilience to endure and resist forces greater than their political and economic power.",  

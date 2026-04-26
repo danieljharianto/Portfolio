@@ -131,7 +131,7 @@ if (imgs.length > 0) {
 
     // ── DUO: 2 images side by side ──
     if (layout === 'duo') {
-      const srcs    = img.srcs || [];
+      const images  = img.images || img.srcs || [];
       const title   = img.title || '';
       const textRaw = img.text || '';
       const text    = Array.isArray(textRaw)
@@ -141,14 +141,29 @@ if (imgs.length > 0) {
       return `
         <div class="image-block image-block--duo">
           <div class="image-block-duo-photos">
-            ${srcs.map((src, j) => `
-              <div class="grid-img-wrap" data-src="${src}">
-                <div class="grid-img-inner">
-                  <img src="${src}" alt="${title} ${j + 1}" />
+            ${images.map((imgData, j) => {
+              const src = typeof imgData === 'string' ? imgData : imgData.src;
+              const imgTitle = typeof imgData === 'object' ? (imgData.title || '') : '';
+              const imgTextRaw = typeof imgData === 'object' ? (imgData.text || '') : '';
+              const imgText = Array.isArray(imgTextRaw)
+                ? imgTextRaw.map(para => `<p class="image-block-text">${para}</p>`).join('')
+                : imgTextRaw ? `<p class="image-block-text">${imgTextRaw}</p>` : '';
 
+              return `
+                <div class="duo-item">
+                  <div class="grid-img-wrap" data-src="${src}">
+                    <div class="grid-img-inner">
+                      <img src="${src}" alt="${imgTitle || title} ${j + 1}" />
+                    </div>
+                  </div>
+                  ${imgTitle || imgText ? `
+                    <div class="duo-item-desc">
+                      ${imgTitle ? `<h4 class="image-block-title-duo">${imgTitle}</h4>` : ''}
+                      ${imgText}
+                    </div>` : ''}
                 </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
           ${title || text ? `
             <div class="image-block-duo-desc">
