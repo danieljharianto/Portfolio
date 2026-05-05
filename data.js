@@ -212,7 +212,7 @@ const projects = [
     medium: "Web Application",
     image: "Image/Project_2/01_DH_Proj2.png",
     prototype: {
-      url: "https://danieljharianto.github.io/SBX_WebMap/",
+      url: "https://sbx-web-map-luqd.vercel.app/",
       label: "Map Platform"  
     },
     // video: "https://www.youtube.com/embed/kDRsn2oVqQE",
