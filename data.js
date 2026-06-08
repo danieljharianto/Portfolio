@@ -52,7 +52,7 @@ const projects = [
     image: "Image/Project_10/01_DH_Proj10.png", 
     video: "https://www.youtube.com/embed/3DzUXXrBslM?autoplay=1&mute=1",
     location: "Cambridge, MA",
-    status: "Ongoing",
+    status: "Completed",
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
     images: [
       { src: "Image/Project_10/02_DH_Proj10.png", 
@@ -226,11 +226,10 @@ const projects = [
         reverse: false,
         layout: "single"
       },
-      { src: "Image/Project_2/05_DH_Proj2.png", 
+      { src: "Image/Project_2/11_DH_Proj2.png", 
         title: "From Analysis to Initiative",
         text: "This project translates performative urban analysis into tangible public action by using data on pedestrian movement, street capacity, and everyday use to directly inform community-led interventions. Rather than remaining abstract, analytical findings are tested on the ground through the Open Streets program, where excess roadway is temporarily reclaimed and activated as part of public community festivals." ,  
-        reverse: true,
-        layout: "single"
+        layout: "full"
       },
       { src: "Image/Project_2/03_DH_Proj2.png", 
         title: "Open Data and Mobility Knowledge",
