@@ -46,6 +46,7 @@ const projects = [
     italicWord: "Frenzy",
     tags: ["1D Game", "Product Design","P5.js","Arduino"],
     desc: "A one dimensional rhythm-driven carbonation battle where players build as much pressure in the soda bottle as possible.",
+    highlight: "Fizzy Frenzy is a rhythm-based game where players compete to build up maximum pressure inside a soda bottle. Players tap and shake controllers in a test of speed, focus, and resilience, with the outcome revealed when both bottles pop The game combines physical interaction with digital feedback, creating an engaging and competitive experience that celebrates the simple joy of opening a fizzy drink.",
     long: "Fizzy Frenzy is a rhythm-based game where players compete to build up maximum pressure inside a soda bottle. Players tap and shake controllers in a test of speed, focus, and resilience, with the outcome revealed when both bottles pop The game combines physical interaction with digital feedback, creating an engaging and competitive experience that celebrates the simple joy of opening a fizzy drink.",
     year: "2026",
     medium: "Industrial Design / Game",
@@ -138,6 +139,7 @@ const projects = [
     italicWord: "Frontiers",
     tags: ["Research", "Environmental Justice", "Borneo", "Public Empowerment"],
     desc: "Six-part drawing series examining meranti extraction in West Borneo and its impact on Dayak communities.",
+    highlight: "The project explores how global demand for meranti drives deforestation and social conflict in West Borneo, revealing the complex interplay of environmental degradation, Indigenous land rights, and cultural resilience.",
     long: "In Sabar Bubu, West Borneo, the forest’s rhythms are increasingly shaped by chainsaws and transport trucks as global demand for exotic hardwoods such as mahogany, teak, and meranti drives intensified extractivism. Expanding state forestry concessions overlap with Indigenous customary territories, accelerating deforestation, degrading biodiversity, and generating persistent disputes over land and authority. Meranti, prized for its strength and durability, is harvested at rates that exceed the forest’s regenerative capacity. For Dayak communities, meranti is more than a commodity. It defines adat boundaries, supports spiritual practices, and embodies ecological memory. Its disappearance represents not only environmental loss but also cultural erosion, as anchors of collective life and belonging vanish with the canopy. Drawing on Anna Tsing’s concept of friction as unequal and unstable encounters, this research frames these conflicts as sites where global markets and state forestry regimes unsettle Indigenous worlds and reshape the politics of land, legality, and identity.",
     year: "2025",
     medium: "Drawing / Research",
@@ -151,13 +153,13 @@ const projects = [
         title: "Demand History of Exotic Wood – Meranti",
         text: "Global demand for meranti grew in the nineteenth century, driving trade oriented logging in Southeast Asia. By the late twentieth century, corporate expansion in Borneo sharply increased deforestation. Under Suharto, concessions favored elites, accelerating extraction. Decentralization later intensified conflicts, while global construction and furniture markets continue sustaining ecological and social pressures.",   
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
       { src: "Image/Project_1/02_DH_Proj1.png", 
         title: "Disputed Extraction Site",
         text: "For centuries, Dayak communities governed land through adat systems. Although the 1960 Agrarian Law recognized customary rights, weak enforcement enabled state backed concessions. In Sabar Bubu, severe deforestation and forced displacement followed, affecting thousands. The case exposes how legal ambiguity and extraction undermine Indigenous territory and belonging." ,  
-        reverse: true,
-        layout: "single"
+        reverse: false,
+        layout: "feature"
       },
       // {
       //   layout: "duo",    
@@ -184,7 +186,7 @@ const projects = [
         title: "Disputed Extraction Site",
         text: "For centuries, Dayak communities governed land through adat systems. Although the 1960 Agrarian Law recognized customary rights, weak enforcement enabled state backed concessions. In Sabar Bubu, severe deforestation and forced displacement followed, affecting thousands. The case exposes how legal ambiguity and extraction undermine Indigenous territory and belonging." ,  
         reverse: true,
-        layout: "single"
+        layout: "feature"
       },
       {
         layout: "full",
@@ -196,7 +198,7 @@ const projects = [
         title: "Vicious Cycle",
         text: "Forest conflict in West Borneo exposes a political and economic cycle that weakens Indigenous land rights. Overlapping laws, poor enforcement, and corruption enable state institutions and corporations to benefit from extraction. Through elite networks and permits, concessions expand despite objections, leaving Dayak communities with rights recognized legally but undermined in practice." ,  
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
 
     ],
@@ -207,6 +209,7 @@ const projects = [
     italicWord: "Atlas",
     tags: ["Web Mapping", "Mapbox GL JS", "C#", "JavaScript","Digital Commisioning"],
     desc: "Interactive web application visualizing pedestrian density, traffic flows, and PLOS across the South Bronx.",
+    highlight: "The digital platform uses intuitive maps, visuals, and interactive tools to help residents and decision-makers explore street conditions, movement patterns, and opportunities. By simplifying complex data, it makes information clear, transparent, and actionable for public engagement.",
     long: "This proposal advances an integrated strategy to transform South Bronx streets into safer, more inclusive, and community oriented public spaces by rebalancing movement and place. Although many corridors experience high pedestrian volumes, they continue to function primarily as vehicular thoroughfares, creating unsafe and stressful walking environments. Through traffic counts, pedestrian flow mapping, and density analysis, the strategy identifies redundant travel lanes and underutilized right of way that can be reallocated to widen sidewalks, enhance crossings, and introduce flexible public space. Corridors with excess vehicular capacity are prioritized for activation through the Open Streets program, incorporating modular and movable furniture to accommodate daily activities, local markets, and community gatherings. Mobility systems are reorganized through time based freight management, designated loading zones, and integrated bicycle, micromobility, and transit infrastructure. Together, these interventions reduce conflicts, improve circulation efficiency, and support a more equitable and people centered street environment.",
     year: "2025",
     medium: "Web Application",
@@ -224,18 +227,20 @@ const projects = [
         title: "Mobility Publlic Engagement",
         text: "Grounded in pedestrian and traffic analysis and informed by community engagement with South Bronx Unite, the project balances lived experience with data-driven design. In partnership with NYC EDC, it reallocates excess roadway into wider sidewalks, flexible Open Streets, and modular public furniture, while coordinating freight and mobility to reduce conflicts.",   
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
       { src: "Image/Project_2/11_DH_Proj2.png", 
         title: "From Analysis to Initiative",
         text: "This project translates performative urban analysis into tangible public action by using data on pedestrian movement, street capacity, and everyday use to directly inform community-led interventions. Rather than remaining abstract, analytical findings are tested on the ground through the Open Streets program, where excess roadway is temporarily reclaimed and activated as part of public community festivals." ,  
         layout: "full"
       },
-      { src: "Image/Project_2/03_DH_Proj2.png", 
+      { srcs: ["Image/Project_2/03_DH_Proj2.png",
+              "Image/Project_2/03_DH_Proj2.png",
+              "Image/Project_2/03_DH_Proj2.png"],
         title: "Open Data and Mobility Knowledge",
         text: "The digital platform uses intuitive maps, visuals, and interactive tools to help residents and decision-makers explore street conditions, movement patterns, and opportunities. By simplifying complex data, it makes information clear, transparent, and actionable for public engagement.",   
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
       // { src: "Image/Project_2/04_DH_Proj2.png", 
       //   title: "Demand History of Exotic Wood – Meranti",
@@ -244,16 +249,17 @@ const projects = [
       //   layout: "single"
       // },
       {
-        layout: "full",
+        layout: "feature",
+        reverse: false,
         src: "Image/Project_2/04_DH_Proj2.png",
         // title: "Full Width View",
-        // text: ["Description that sits below the full-width image."],
+        // text: opsi["Description that sits below the full-width image."],
       },
       { src: "Image/Project_2/06_DH_Proj2.png", 
         title: "Digital Toolkit as Resource",
         text: "Selected interventions target streets identified through analysis of pedestrian demand, traffic, and capacity. By focusing on key corridors rather than broad citywide changes, the toolkit translates data directly into street-level design actions.",   
         reverse: true,
-        layout: "single"
+        layout: "feature"
       },
       // { src: "Image/Project_2/07_DH_Proj2.png", 
       //   title: "Demand History of Exotic Wood – Meranti",
@@ -262,7 +268,8 @@ const projects = [
       //   layout: "single"
       // },
             {
-        layout: "full",
+        layout: "feature",
+        reverse: true,
         src: "Image/Project_2/07_DH_Proj2.png",
         title: "Public Realm Improvement",
         text: ["Priority streets are selected where high pedestrian activity overlaps with underutilized roadway space, enabling the reallocation of lanes into wider sidewalks, safer crossings, and flexible public areas. In doing so, the strategy not only improves walking conditions but also strengthens the role of streets as social and economic spaces that support local businesses and community activities."]
@@ -285,8 +292,9 @@ const projects = [
     id: "05",
     title: "OrangoPlan — Grasshopper Plugin",
     italicWord: "Plugin",
-    tags: ["C#", "Python","Grasshopper SDK","Digital Commisioning"],
+    tags: ["C#", "Python","Grasshopper SDK",".NET Development"],
     desc: "Grasshopper plug enabling real-time urban design and planning prototyping.",
+    highlight: "OrangoPlan provides parametric tools to model, analyze, and visualize complex urban design workflows. It enables designers and planners to create adaptive street networks, land-use layouts, building massing, public space configurations, and infrastructure simulations.",
     long: "OrangoPlan provides parametric tools to model, analyze, and visualize complex urban design workflows. It enables designers and planners to create adaptive street networks, land-use layouts, building massing, public space configurations, and infrastructure simulations.",
     year: "2024",
     medium: "Software / Plugin",
@@ -339,8 +347,9 @@ const projects = [
     id: "06",
     title: "Smoked County Relish",
     italicWord: "Relish",
-    tags: ["Thesis", "C#","Java Script","Python","Building Science","Discrete Math"],
+    tags: ["C#","Java Script","Python","Building Science","Discrete Math"],
     desc: "Rethinking coastal culture to revoke poverty and technological disjunction in Indonesia",
+    highlight: "Preserving coastal culture through adaptive reuse and computational design to enhance community resilience in Semarang, Indonesia.",
     long: "Indonesia, as a country consisting of islands, holds an affinity for coastal cultures. Evolve within absolute time; the indigenous support their lives by gaining the source and preserving it with various methods. Semarang City, located on northern Java Island, is famous for its smoked fish preservation. As they believe the technique is sea frontliners inheritance, they are stigmatized as second-class people. The design effort seeks appropriateness and reuse of heritage buildings to secure the perimeter and encourage community resilience. In tourism attraction strategy, they must race during environmental degradation.",
     year: "2021",
     medium: "Computational Design",
@@ -424,9 +433,10 @@ const projects = [
   {
     id: "07",
     title: "Indonesia New Capital City Urban Design Guidelines",
-    italicWord: "Guidelines",
+    italicWord: "Urban Design Guidelines",
     tags: ["Research", "C#", "Python", "Planning Modelling"],
     desc: "Urban guidelines that integrate urban analytics from precinct to parcel scale to drive performance-based into future-ready development.",
+    highlight: "The Government Core (KIPP) Urban Design Development spans 6,671 hectares ensuring alignment with performance targets and a future-ready city vision.",
     long: "The Government Core (KIPP) Urban Design Development spans 6,671 hectares and is organized into three sub-planning areas: 1A (Government Center), 1B (Education Center), and 1C (Wellness Center), structured around an archipelago-inspired urban form. The plan integrates modeling, visualization, and analytical tools to support decision-making, with the Nusantara Urban Design Guidelines guiding development from precinct to parcel scale to ensure alignment with performance targets and a future-ready city vision.",
     year: "2021",
     medium: "Computational Design",
@@ -510,6 +520,7 @@ const projects = [
     italicWord: "Implementation",
     tags: ["Research",,"C#", "Python", "Urban Mobility", "Public Empowerment"],
     desc: "Creating a TOD-POD template to better shape urban mobility within the Jakarta Metropolitan Area.",
+    highlight: "The TOD-POD template is designed to enhance urban mobility and public space quality in the Jakarta Metropolitan Area, addressing challenges of rapid urbanization and car dependency.",
     long: "The Jakarta metropolitan area (Jabodetabek) consists of Jakarta, Bogor, Depok, Tangerang, and Bekasi, covering over 6,438 sq km, and it is considered the second largest metropolitan area in the world after the Tokyo metropolitan area in Japan (14,034 sq km). The metropolitan area is home to a population of 40 million people in 2022.There has been relatively little focus on the ‘implementation’ of strategic imperatives, with most urban development and transit initiatives emerging through either reactive or speculative means. Therefore, the city’s planning administration needs to strengthen its understanding and knowledge in planning Transit-Oriented Development (TOD) and Pedestrian-Oriented Design (POD).",
     year: "2023",
     medium: "Computational Design",
@@ -572,7 +583,8 @@ const projects = [
     italicWord: "Coastal Demak",
     tags: ["Research", "C#","Java Script","Python","Building Science","Discrete Math"],
     desc: "Hardware-integrated tap-beat game with Arduino button inputs and PoseNet nose-tracking for gameplay control.",
-    long: "Coastal people’s habit of hoarding abandoned materials forms the basis for the dignified transformation of immaterial debris into supportive habitation. Rather than being a source of negative values, it could potentially serve as an alternative means of surviving under the natural degradation caused by sea level rise. The community of 285 houses in Bedono, Coastal Demak, Central Java, is the target of this project, which aims to introduce a fresh approach to construction by repurposing leftover materials for more advantageous investments. In addition to the economic challenges, purchasing new materials for house repairs is no longer feasible due to factors such as inflation and declining occupancy, which could potentially “suffocate” the community.",
+    highlight:"Coastal people’s habit of hoarding abandoned materials forms the basis for the dignified transformation of immaterial debris into supportive habitation.",
+    long: "Rather than being a source of negative values, it could potentially serve as an alternative means of surviving under the natural degradation caused by sea level rise. The community of 285 houses in Bedono, Coastal Demak, Central Java, is the target of this project, which aims to introduce a fresh approach to construction by repurposing leftover materials for more advantageous investments. In addition to the economic challenges, purchasing new materials for house repairs is no longer feasible due to factors such as inflation and declining occupancy, which could potentially “suffocate” the community.",
     year: "2021",
     medium: "Computational Design",
     image: "Image/Project_6/01_DH_Proj6.png",
@@ -648,10 +660,11 @@ const projects = [
 
   {
     id: "10",
-    title: "Experimenting Gentle Density of  Tanah Abang TOD",
-    italicWord: "TOD",
+    title: "Experimenting TOD Gentle Density",
+    italicWord: "Gentle Density",
     tags: ["Research", "C#","Java Script","Python"],
     desc: "Hardware-integrated tap-beat game with Arduino button inputs and PoseNet nose-tracking for gameplay control.",
+    highlight: "This research proposes gentle density, combining missing-middle housing with selective high-rise development to support inclusive growth in Jakarta’s transit-oriented development (TOD) areas.", 
     long: "Affordable housing near transit in Jakarta is increasingly scarce due to rapid urbanization and limited housing diversity. This research proposes gentle density, combining missing-middle housing with selective high-rise development to support inclusive growth. Focusing on the Tanah Abang TOD, a parametric workflow in Rhino and Grasshopper evaluates transit access and affordability to generate housing typologies. ",
     year: "2023",
     prototype: {
@@ -731,6 +744,7 @@ const projects = [
     italicWord: "Strategic",
     tags: ["Research", "C#", "Python", "Planning Modelling"],
     desc: "Integrating spatial data, modeling, and scenario testing to guide design and market decisions",
+    highlight: "Custom computational tools were developed to organize spatial, environmental, and market inputs into a flexible decision-making workflow, enabling rapid testing of design parameters, infrastructure alignments, and development scenarios tailored to Middle East contexts.",
     long: "Custom computational tools were developed to organize spatial, environmental, and market inputs into a flexible decision-making workflow, enabling rapid testing of design parameters, infrastructure alignments, and development scenarios tailored to Middle East contexts. Spatial modeling and scenario testing optimized land use, parcel configuration, and waterfront frontage to maximize sellable value while maintaining environmental performance and long-term identity, aligning design decisions with market demand and phasing strategies.",
     year: "2023",
     medium: "Computational Design",

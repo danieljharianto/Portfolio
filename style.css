@@ -34,7 +34,7 @@
   --ink           : #1c2211; 
   --muted         : #7a7d72; 
   --light-grey    : #b0b0b0; 
-  --border        : rgba(60, 78, 31, 0.12);
+  --border        : rgba(0, 0, 0, 0.469);
 
   /* --green:        #6b7a3a;
   --green-deep:   #4a5528;
@@ -187,7 +187,7 @@ nav a:hover { color: var(--white); }
   min-height: 60vh;
 }
 
-.hero-tags {
+/* .hero-tags {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -201,7 +201,7 @@ nav a:hover { color: var(--white); }
   font-weight: 500;
   color: var(--green-accent);
   letter-spacing: 0.01em;
-}
+} */
 
 .hero-name {
   font-family: var(--font-body);
@@ -309,11 +309,11 @@ nav a:hover { color: var(--white); }
 
 .project-card-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.95rem;
   transition: color 0.28s;
 }
 
@@ -325,7 +325,7 @@ nav a:hover { color: var(--white); }
 
 .project-card-desc {
   font-family: var(--font-body);
-  font-size: 12.5px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.75;
 }
@@ -359,14 +359,15 @@ nav a:hover { color: var(--white); }
 
 .tag {
   font-family: var(--font-body);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
+  padding: 0.9rem 0.9rem;
   border: 1px solid var(--border);
   color: var(--muted);
-  border-radius: 2px;
+  border-radius: 12px;
+  margin-top: 2rem;
 }
 
 /* ─────────────────────────────────────────
@@ -428,7 +429,7 @@ nav a:hover { color: var(--white); }
    FOOTER
 ───────────────────────────────────────── */
 footer {
-  background: var(--white);
+  background: #000000;
   border-top: 1px solid var(--border);
   padding: 2rem 2.5rem;
   display: flex;
@@ -580,7 +581,7 @@ footer {
 
 .detail-label {
   font-family: var(--font-body);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -609,6 +610,7 @@ footer {
   padding: 0.9rem 2rem;
   text-decoration: none;
   transition: background 0.2s;
+  
 }
 
 .modal-link:hover { background: var(--ink); }
@@ -635,9 +637,9 @@ footer {
 /* ─────────────────────────────────────────
    SCROLLBAR
 ───────────────────────────────────────── */
-::-webkit-scrollbar             { width: 4px; }
-::-webkit-scrollbar-track       { background: var(--bg); }
-::-webkit-scrollbar-thumb       { background: var(--green); border-radius: 2px; }
+/* ::-webkit-scrollbar             { width: 8px; }
+::-webkit-scrollbar-track       { background: black; }
+::-webkit-scrollbar-thumb       { background: white; border-radius: 2px; } */
 
 /* ─────────────────────────────────────────
    RESPONSIVE
@@ -796,7 +798,7 @@ footer {
   color: var(--muted);
   border: 1px solid var(--border);
   padding: 0.55rem 1rem;
-  border-radius: 2px;
+  border-radius: 12px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 

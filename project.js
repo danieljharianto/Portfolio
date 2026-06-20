@@ -21,10 +21,9 @@ document.title = `${p.title} — Daniel J Harianto`;
 //   `${p.id} / 0${projects.length}`;
 
 document.getElementById('projectTitle').innerHTML =
-  p.title.replace(p.italicWord, `<em>${p.italicWord}</em>`);
+  p.title.replace(p.italicWord, `<br><em>${p.italicWord}</em>`);
 
-document.getElementById('projectTags').innerHTML =
-  p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+document.getElementById('projectTags').innerHTML = '';
 
 // 6. Cover — real image or gradient placeholder
 const cover = document.getElementById('projectCover');
@@ -50,42 +49,47 @@ if (p.video) {
     </div>`;
 }
 
-// 7. Info bar
-document.getElementById('projectInfoBar').innerHTML = `
-  <div class="project-info-item">
-    <span class="detail-label">Year</span>
-    <span class="detail-value">${p.year}</span>
+// 7. Info bar + Overview
+document.getElementById('projectIntroSection').innerHTML = `
+  <div class="project-intro-info">
+    <div class="project-info-item">
+      <span class="detail-label">Year</span>
+      <span class="detail-value">${p.year}</span>
+    </div>
+    <div class="project-info-item">
+      <span class="detail-label">Medium</span>
+      <span class="detail-value">${p.medium}</span>
+    </div>
+    <div class="project-info-item">
+      <span class="detail-label">Location</span>
+      <span class="detail-value">${p.location}</span>
+    </div>
+    <div class="project-info-item">
+      <span class="detail-label">Status</span>
+      <span class="detail-value">${p.status}</span>
+    </div>
   </div>
-  <div class="project-info-item">
-    <span class="detail-label">Medium</span>
-    <span class="detail-value">${p.medium}</span>
+  <div class="project-intro-overview">
+    ${p.highlight ? `<p class="project-overview-highlight">${p.highlight}</p>` : ''}
+    <p>${p.long}</p>
   </div>
-  <div class="project-info-item">
-    <span class="detail-label">Location</span>
-    <span class="detail-value">${p.location}</span>
-  </div>
-  <div class="project-info-item">
-    <span class="detail-label">Status</span>
-    <span class="detail-value">${p.status}</span>
-
 `;
 
-// 8. Overview
-document.getElementById('projectOverview').innerHTML = `<p>${p.long}</p>`;
-
-// 8b. Prototype link
+// 8b. Prototype link + tags
 const protoWrap = document.getElementById('projectPrototype');
+const tagsHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
 if (protoWrap) {
   if (p.prototype) {
     protoWrap.innerHTML = `
       <div class="prototype-band">
         <a href="${p.prototype.url}" class="prototype-link" target="_blank" rel="noopener">
-          ${p.prototype.label || 'Launch Prototype'} →
+          ${p.prototype.label || 'Launch Prototype'}
         </a>
+        <div class="prototype-tags">${tagsHTML}</div>
       </div>
     `;
   } else {
-    protoWrap.innerHTML = '';
+    protoWrap.innerHTML = `<div class="prototype-band"><div></div><div class="prototype-tags">${tagsHTML}</div></div>`;
   }
 }
 
@@ -102,7 +106,56 @@ if (imgs.length > 0) {
 
   grid.innerHTML = imgs.map((img, i) => {
     const layout = typeof img === 'object' ? (img.layout || 'single') : 'single';
-    
+
+    // ── FEATURE: 2/3 image(s) + 1/3 text side by side ──
+    if (layout === 'feature') {
+      const title   = img.title || '';
+      const textRaw = img.text || '';
+      const reverse = img.reverse || false;
+      const text    = Array.isArray(textRaw)
+        ? textRaw.map(para => `<p class="image-block-text">${para}</p>`).join('')
+        : textRaw ? `<p class="image-block-text">${textRaw}</p>` : '';
+
+      // multi-image: srcs[0] besar, srcs[1]+srcs[2] kecil di bawah
+      const srcs = img.srcs || [];
+      const photoCol = srcs.length > 0 ? `
+        <div class="image-block-photos feature-photos">
+          <div class="grid-img-inner">
+            <img src="${srcs[0]}" alt="${title || p.title}" />
+          </div>
+          ${srcs.length > 1 ? `
+            <div class="feature-photos-small">
+              ${srcs.slice(1).map(s => `
+                <div class="grid-img-inner">
+                  <img src="${s}" alt="${title || p.title}" />
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+      ` : `
+        <div class="image-block-photos">
+          <div class="grid-img-wrap" data-src="${img.src || ''}">
+            <div class="grid-img-inner">
+              <img src="${img.src || ''}" alt="${title || p.title}" />
+            </div>
+          </div>
+        </div>
+      `;
+
+      const descCol = `
+        <div class="image-block-desc">
+          ${title ? `<h4 class="image-block-title">${title}</h4>` : ''}
+          ${text}
+        </div>
+      `;
+      return `
+        <div class="image-block image-block--feature ${reverse ? 'image-block--reverse' : ''}">
+          ${reverse ? descCol + photoCol : photoCol + descCol}
+        </div>
+      `;
+    }
+
     // ── FULL: one image full width + description below ──
     if (layout === 'full') {
       const src     = img.src || '';
@@ -117,7 +170,7 @@ if (imgs.length > 0) {
           <div class="grid-img-wrap" data-src="${src}">
             <div class="grid-img-inner">
               <img src="${src}" alt="${title || p.title}" />
-              
+
             </div>
           </div>
           ${title || text ? `
@@ -209,24 +262,7 @@ if (imgs.length > 0) {
 
   }).join('');
 
-  // ── Lightbox — collect all srcs across all layouts ──
-  // const allSrcs = [];
-  // imgs.forEach(img => {
-  //   if (typeof img === 'object' && img.layout === 'duo') {
-  //     (img.srcs || []).forEach(s => allSrcs.push(s));
-  //   } else {
-  //     const s = typeof img === 'string' ? img : img.src;
-  //     if (s) allSrcs.push(s);
-  //   }
-  // });
-
-  // document.querySelectorAll('.grid-img-wrap').forEach((wrap) => {
-  //   wrap.addEventListener('click', () => {
-  //     const src   = wrap.dataset.src;
-  //     const idx   = allSrcs.indexOf(src);
-  //     openLightbox(allSrcs, idx >= 0 ? idx : 0);
-  //   });
-  // });
+  
 
 } else {
   grid.innerHTML = '';
@@ -248,7 +284,7 @@ document.getElementById('projectNav').innerHTML = `
   </div>
 `;
 
-// 11. Disable save 
+// 11. Disable save
 document.querySelectorAll('img').forEach(img => {
   img.addEventListener('contextmenu', e => e.preventDefault());
 });
