@@ -206,7 +206,7 @@ const projects = [
   {
     id: "04",
     title: "South Bronx Pedestrian Atlas",
-    italicWord: "Atlas",
+    italicWord: "Pedestrian Atlas",
     tags: ["Web Mapping", "Mapbox GL JS", "C#", "JavaScript","Digital Commisioning"],
     desc: "Interactive web application visualizing pedestrian density, traffic flows, and PLOS across the South Bronx.",
     highlight: "The digital platform uses intuitive maps, visuals, and interactive tools to help residents and decision-makers explore street conditions, movement patterns, and opportunities. By simplifying complex data, it makes information clear, transparent, and actionable for public engagement.",
@@ -290,8 +290,8 @@ const projects = [
   },
   {
     id: "05",
-    title: "OrangoPlan — Grasshopper Plugin",
-    italicWord: "Plugin",
+    title: "OrangoPlan Grasshopper Plugin",
+    italicWord: "Grasshopper Plugin",
     tags: ["C#", "Python","Grasshopper SDK",".NET Development"],
     desc: "Grasshopper plug enabling real-time urban design and planning prototyping.",
     highlight: "OrangoPlan provides parametric tools to model, analyze, and visualize complex urban design workflows. It enables designers and planners to create adaptive street networks, land-use layouts, building massing, public space configurations, and infrastructure simulations.",
