@@ -403,7 +403,7 @@
   height: auto;
   display: block;
 }
-
+Fpro
 .image-block-full-desc {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -585,11 +585,11 @@
   text-decoration: none;
   color: var(--white);
   background: black;
-  padding: 0.9rem 2rem;
+  padding: 0.8rem 2rem;
   border-radius: 12px;
   transition: background 0.2s;
   border: 2px solid var(--border);
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .prototype-link:hover { 
