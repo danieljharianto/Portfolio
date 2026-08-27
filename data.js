@@ -451,7 +451,7 @@ const projects = [
         title: "Urban Typologies",
         text: "The design of the development focuses on undulating surfaces to cover sensitive wetland features and existing fault lines. It connects buildings to the ground level through pedestrian pathways and thru-block designs or elevated pathways on higher ground, ensuring efficiency and permeability of the plots within the development." ,  
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
       { src: "Image/Project_7/09_DH_Proj7.png", 
         title: "Multi-Layered Circulation Hierarchy",
@@ -484,7 +484,7 @@ const projects = [
         title: "Plot Densification Guides",
         text: "As one of the detailed precincts, the education area is the heart of Sub Planning 1B, with the main function of Edu-town focusing on an integrated education and research complex supported by low- to high-density residential, amenities, and commercials.The computational approach creates development parameters that consider current design preferences and natural conditions. " ,  
         reverse: false,
-        layout: "single"
+        layout: "feature"
       },
                   {
         layout: "full",
@@ -496,7 +496,7 @@ const projects = [
         title: "Tailored Design Recommendations",
         text: "Each designed plot parameter includes total developable area, FAR, BCR, and maximum tower inside the plot. Based on this self-created development parameter, it can be summarized to gain more insights about the Edu-town area, referring to its forecast density, occupancy, and employment numbers that correspond to further implementations.",   
         reverse: true,
-        layout: "single"
+        layout: "feature"
       },
       {
         layout: "full",
@@ -608,7 +608,7 @@ const projects = [
         title: "Mitigation Plan and Execution",
         text: "Due to limited municipal census data and residents’ lack of insurance or financial support, the renovation scheme prioritized severely sunken houses, especially those submerged by more than one meter.",   
         reverse: true,
-        layout: "single"
+        layout: "feature"
       },
       { src: "Image/Project_6/03_DH_Proj6.png", 
         title: "Focus Group Discussion",

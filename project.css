@@ -403,7 +403,7 @@
   height: auto;
   display: block;
 }
-Fpro
+
 .image-block-full-desc {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -439,7 +439,9 @@ Fpro
 
 /* Responsive */
 @media (max-width: 860px) {
-  .image-block {
+  .image-block,
+  .image-block--feature,
+  .image-block--feature.image-block--reverse {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -447,6 +449,9 @@ Fpro
     position: static;
     border-top: 1px solid var(--border);
     padding-top: 1.5rem;
+  }
+  .feature-photos-small {
+    grid-template-columns: 1fr;
   }
 }
 /* Side-by-side variant — add class "grid-img-wrap--wide" in project.js */
