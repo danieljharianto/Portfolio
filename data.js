@@ -517,7 +517,6 @@ const projects = [
     },
     image: "Image/Project_4/13_DH_Proj4.png",
     video: "https://www.youtube.com/embed/QVvZqij31Ns?autoplay=1&mute=1",
-    location: "Soegijapranata Catholic University",
     location: "Semarang, Indonesia",
     status: "Completed",
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
@@ -604,7 +603,6 @@ const projects = [
       label: "Press Release"  
     },
     // video: "https://www.youtube.com/embed/QVvZqij31Ns",
-    location: "Soegijapranata Catholic University",
     location: "Nusantara, Indonesia",
     status: "Completed",
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
@@ -687,7 +685,6 @@ const projects = [
     year: "2023",
     medium: "Computational Design",
     image: "Image/Project_5/01_DH_Proj5.png",
-    location: "Soegijapranata Catholic University",
     location: "Jakarta, Indonesia",
     status: "Completed",
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
@@ -751,10 +748,13 @@ const projects = [
     medium: "Computational Design",
     image: "Image/Project_6/01_DH_Proj6.png",
     // video: "https://www.youtube.com/embed/QVvZqij31Ns",
-    location: "Soegijapranata Catholic University",
-    location: "Semarang, Indonesia",
+    location: "Demak, Indonesia",
     status: "Completed",
     color: "linear-gradient(160deg, #3d4e1f 0%, #5a7225 100%)",
+    prototype: {
+      url: "https://koozarch.com/archipelago/reclaiming-necessity-dignifying-immaterial-debris-into-succor-habitation",
+      label: "Press Released"  
+    },
     images: [
       { src: "Image/Project_6/02_DH_Proj6.png", 
         title: "Research on the Building Typologies",
