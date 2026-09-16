@@ -331,8 +331,12 @@ const projects = [
     image: "Image/Project_11/01_DH_Proj11.png", 
     // video: "https://www.youtube.com/embed/3DzUXXrBslM?autoplay=1&mute=1",
     location: "Austin, TX",
-    status: "Ongoing",
+    status: "Completed",
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
+    prototype: {
+      url: "https://americas.uli.org/2026-uli-hines-student-competition-finalist-common-ground-harvard-university-massachusetts-institute-of-technology-mit/",
+      label: "Press Released"  
+    },
     images: [
       // { src: "Image/Project_11/02_DH_Proj11.png", 
       //   // title: "Rhythm Mechanics",
