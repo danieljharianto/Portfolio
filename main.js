@@ -4,18 +4,19 @@ const projectCategories = {
   '03': ['computation'],
   '04': ['computation'],
   '05': ['urbanism', 'writing'],
-  '06': ['urbanism', 'architecture', 'computation'],
-  '07': ['urbanism', 'computation'],
-  '08': ['architecture', 'computation'],
+  '06': ['urbanism', 'writing'],
+  '07': ['urbanism', 'architecture', 'computation'],
+  '08': ['urbanism', 'computation'],
   '09': ['architecture', 'computation'],
-  '10': ['urbanism', 'computation'],
+  '10': ['architecture', 'computation'],
   '11': ['urbanism', 'computation'],
-  '12': ['urbanism', 'architecture', 'computation'],
-  '13': ['urbanism', 'computation'],
-  '14': ['urbanism', 'architecture', 'computation'],
-  '15': ['urbanism', 'computation'],
+  '12': ['urbanism', 'computation'],
+  '13': ['urbanism', 'architecture', 'computation'],
+  '14': ['urbanism', 'computation'],
+  '15': ['urbanism', 'architecture', 'computation'],
   '16': ['urbanism', 'computation'],
   '17': ['urbanism', 'computation'],
+  '18': ['urbanism', 'computation'],
 };
 const grid = document.getElementById('projectGrid');
 const count = document.getElementById('project-count');
@@ -64,7 +65,7 @@ filterProjects('all');
 // Featured projects rotate automatically every five seconds.
 const heroContainer = document.getElementById('heroSlides');
 if (heroContainer) {
-  const featured = ['06', '05', '07', '12', '02'].map(id => projects.find(project => project.id === id)).filter(project => project?.image);
+  const featured = ['07', '05', '08', '13', '02'].map(id => projects.find(project => project.id === id)).filter(project => project?.image);
   let activeSlide = 0;
   const dots = document.getElementById('heroDots');
   const slides = featured.map((project, index) => {
