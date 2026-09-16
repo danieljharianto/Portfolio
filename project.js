@@ -1,3 +1,4 @@
+(() => {
 // project.js
 
 // 1. Read ?id= from the URL
@@ -10,7 +11,8 @@ const p     = projects[index];
 
 // 3. If no match, go back to home
 if (!p) {
-  window.location.href = 'index.html';
+  window.location.replace('index.html');
+  return;
 }
 
 // 4. Update browser tab title
@@ -20,64 +22,40 @@ document.title = `${p.title} — Daniel J Harianto`;
 // document.getElementById('projectNumber').textContent =
 //   `${p.id} / 0${projects.length}`;
 
-document.getElementById('projectTitle').innerHTML =
-  p.title.replace(p.italicWord, `<br><em>${p.italicWord}</em>`);
-
-document.getElementById('projectTags').innerHTML = '';
+document.getElementById('projectTitle').textContent = p.title;
+document.getElementById('projectYear').textContent = p.year || '';
+document.getElementById('projectLocation').textContent = p.location || '';
+document.getElementById('projectMetadata').innerHTML = [['Medium', p.medium], ['Status', p.status]]
+  .filter(([, value]) => value).map(([label, value]) => '<dt>' + label + '</dt><dd>' + value + '</dd>').join('');
 
 // 6. Cover — real image or gradient placeholder
 const cover = document.getElementById('projectCover');
 
 if (p.video) {
-  cover.innerHTML = `
-    <div class="project-cover-video">
-      <iframe
-        src="${p.video}"
-        title="${p.title}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  `;
+  cover.innerHTML = `<div class="project-cover-video"><iframe src="${p.video}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 } else if (p.image) {
-  cover.innerHTML = `<img src="${p.image}" alt="${p.title}" />`;
+  const image = document.createElement('img');
+  image.src = p.image;
+  image.alt = p.title;
+  image.fetchPriority = 'high';
+  image.decoding = 'async';
+  cover.append(image);
 } else {
-  cover.innerHTML = `
-    <div class="project-cover-placeholder" style="background:${p.color}">
-      ${p.medium}
-    </div>`;
+  cover.innerHTML = '<div class="project-cover-placeholder">' + (p.medium || p.title) + '</div>';
 }
+
 
 // 7. Info bar + Overview
 document.getElementById('projectIntroSection').innerHTML = `
-  <div class="project-intro-info">
-    <div class="project-info-item">
-      <span class="detail-label">Year</span>
-      <span class="detail-value">${p.year}</span>
-    </div>
-    <div class="project-info-item">
-      <span class="detail-label">Medium</span>
-      <span class="detail-value">${p.medium}</span>
-    </div>
-    <div class="project-info-item">
-      <span class="detail-label">Location</span>
-      <span class="detail-value">${p.location}</span>
-    </div>
-    <div class="project-info-item">
-      <span class="detail-label">Status</span>
-      <span class="detail-value">${p.status}</span>
-    </div>
-  </div>
   <div class="project-intro-overview">
     ${p.highlight ? `<p class="project-overview-highlight">${p.highlight}</p>` : ''}
-    <p>${p.long}</p>
+    <p>${p.long || p.desc || ''}</p>
   </div>
 `;
 
 // 8b. Prototype link + tags
 const protoWrap = document.getElementById('projectPrototype');
-const tagsHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+const tagsHTML = (p.tags || []).filter(Boolean).map(t => `<span class="tag">${t}</span>`).join('');
 if (protoWrap) {
   if (p.prototype) {
     protoWrap.innerHTML = `
@@ -85,18 +63,13 @@ if (protoWrap) {
         <a href="${p.prototype.url}" class="prototype-link" target="_blank" rel="noopener">
           ${p.prototype.label || 'Launch Prototype'}
         </a>
-        <div class="prototype-tags">${tagsHTML}</div>
+        <div><strong>Category</strong><div class="prototype-tags">${tagsHTML}</div></div>
       </div>
     `;
   } else {
-    protoWrap.innerHTML = `<div class="prototype-band"><div></div><div class="prototype-tags">${tagsHTML}</div></div>`;
+    protoWrap.innerHTML = `<div class="prototype-band"><div></div><div><strong>Category</strong><div class="prototype-tags">${tagsHTML}</div></div></div>`;
   }
 }
-
-        // <div class="prototype-band-text">
-        //   <span class="prototype-label">Prototype</span>
-        //   <p class="prototype-desc">Try out the live version of this project.</p>
-        // </div>
 
 // 9. Image grid — extra images or placeholders
 const grid = document.getElementById('projectImageGrid');
@@ -268,23 +241,9 @@ if (imgs.length > 0) {
   grid.innerHTML = '';
 }
 
-// 10. Prev / Next navigation
-const prev = projects[index - 1];
-const next = projects[index + 1];
-
-document.getElementById('projectNav').innerHTML = `
-  <a href="index.html" class="project-nav-back">← All Projects</a>
-
-  <div class="project-nav-arrows">
-    ${next ? `
-      <a href="project.html?id=${next.id}" class="project-nav-next">
-        Next Project →<br />
-        <span>${next.title}</span>
-      </a>` : ''}
-  </div>
-`;
-
-// 11. Disable save
-document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('contextmenu', e => e.preventDefault());
+document.querySelectorAll('#projectImageGrid img').forEach(img => {
+  img.loading = 'lazy';
+  img.decoding = 'async';
 });
+
+})();

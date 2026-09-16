@@ -1,0 +1,40 @@
+﻿/* Shared SF Pro family for every portfolio page. */
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('SF Pro Display Regular'), local('SFProDisplay-Regular');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Text Medium'), local('SFProText-Medium'), local('SF Pro Display Medium'), local('SFProDisplay-Medium');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('SF Pro Display Semibold'), local('SFProDisplay-Semibold');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Text Bold'), local('SFProText-Bold'), local('SF Pro Display Bold'), local('SFProDisplay-Bold');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --font-body: 'SF Pro', sans-serif;
+  --font-display: var(--font-body);
+  --mono: var(--font-body);
+}
+html, body, button, input, select, textarea {
+  font-family: var(--font-body);
+  font-synthesis: none;
+}
+/* Keep all text upright, including semantic emphasis in existing project titles. */
+body, body * { font-style: normal; }
