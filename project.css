@@ -110,3 +110,5 @@ body { --detail-width: 1200px; }
   .image-block { margin-bottom: 28px; }
 }
 
+
+@media (max-width: 600px) { .project-cover { position: static; } }

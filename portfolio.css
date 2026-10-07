@@ -140,3 +140,14 @@ h1 { max-width: 529px; font-size: var(--heading-size); font-weight: 400; line-he
   .home-page .intro h1 { width: 100%; }
   .site-name { grid-column: 1; margin-left: 0; }
 }
+
+/* Arrow icons as SVG masks, so phones don't swap them for emoji glyphs; they take the link color. */
+.icon { display: inline-block; width: .75em; height: .75em; vertical-align: -.05em; background: currentColor; -webkit-mask: var(--icon) no-repeat center / contain; mask: var(--icon) no-repeat center / contain; }
+.icon-ext { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath d='M3 9 9 3M4 3h5v5'/%3E%3C/svg%3E"); }
+.icon-back { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath d='M10.5 6H2M5.5 2.5 2 6l3.5 3.5'/%3E%3C/svg%3E"); }
+
+/* Phones: let the wide (~2.3:1) covers show in full instead of cropping them into tall boxes. */
+@media (max-width: 600px) {
+  .hero-slides { height: auto; aspect-ratio: 2560 / 1111; }
+  .project-image-wrap { aspect-ratio: 2560 / 1111; }
+}
