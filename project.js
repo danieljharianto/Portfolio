@@ -75,6 +75,11 @@ if (protoWrap) {
 const grid = document.getElementById('projectImageGrid');
 const imgs = p.images ? p.images : [];
 
+// Looping .mp4 clips render as silent autoplay video with no controls; everything else as <img>
+const media = (src, alt) => /\.mp4$/i.test(src)
+  ? `<video src="${src}" aria-label="${alt}" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback></video>`
+  : `<img src="${src}" alt="${alt}" />`;
+
 if (imgs.length > 0) {
 
   grid.innerHTML = imgs.map((img, i) => {
@@ -94,13 +99,13 @@ if (imgs.length > 0) {
       const photoCol = srcs.length > 0 ? `
         <div class="image-block-photos feature-photos">
           <div class="grid-img-inner">
-            <img src="${srcs[0]}" alt="${title || p.title}" />
+            ${media(srcs[0], `${title || p.title}`)}
           </div>
           ${srcs.length > 1 ? `
             <div class="feature-photos-small">
               ${srcs.slice(1).map(s => `
                 <div class="grid-img-inner">
-                  <img src="${s}" alt="${title || p.title}" />
+                  ${media(s, `${title || p.title}`)}
                 </div>
               `).join('')}
             </div>
@@ -110,7 +115,7 @@ if (imgs.length > 0) {
         <div class="image-block-photos">
           <div class="grid-img-wrap" data-src="${img.src || ''}">
             <div class="grid-img-inner">
-              <img src="${img.src || ''}" alt="${title || p.title}" />
+              ${media(img.src || '', `${title || p.title}`)}
             </div>
           </div>
         </div>
@@ -142,7 +147,7 @@ if (imgs.length > 0) {
         <div class="image-block image-block--full">
           <div class="grid-img-wrap" data-src="${src}">
             <div class="grid-img-inner">
-              <img src="${src}" alt="${title || p.title}" />
+              ${media(src, `${title || p.title}`)}
 
             </div>
           </div>
@@ -179,7 +184,7 @@ if (imgs.length > 0) {
                 <div class="duo-item">
                   <div class="grid-img-wrap" data-src="${src}">
                     <div class="grid-img-inner">
-                      <img src="${src}" alt="${imgTitle || title} ${j + 1}" />
+                      ${media(src, `${imgTitle || title} ${j + 1}`)}
                     </div>
                   </div>
                   ${imgTitle || imgText ? `
@@ -213,7 +218,7 @@ if (imgs.length > 0) {
       <div class="image-block-photos">
         <div class="grid-img-wrap" data-src="${src}">
           <div class="grid-img-inner">
-            <img src="${src}" alt="${title || p.title}" />
+            ${media(src, `${title || p.title}`)}
 
           </div>
         </div>
