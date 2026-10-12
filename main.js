@@ -1,5 +1,6 @@
 ﻿// Categories reflect the subject of each existing project; a project can span disciplines.
 const projectCategories = {
+  '19': ['urbanism', 'computation'],
   '02': ['computation'],
   '03': ['computation'],
   '04': ['computation'],
@@ -30,22 +31,23 @@ function element(tag, className, text) {
 const cards = projects.map((project, index) => {
   const card = element('a', 'project-card');
   card.href = `project.html?id=${encodeURIComponent(project.id)}`;
-  const heading = element('div', 'project-heading');
-  heading.append(element('h2', 'project-title', project.title), element('p', 'project-year', project.year));
-  const summary = element('div', 'project-summary');
-  if (project.location) summary.append(element('p', 'project-location', project.location));
-  summary.append(element('p', 'project-description', project.desc));
+  // Image fills the tile; year, title and one-line caption appear only on hover/focus (always shown on touch screens).
   const media = element('div', 'project-image-wrap');
-  if (project.image) {
+  const src = project.thumb || project.image;
+  if (src) {
     const img = element('img', 'project-img');
-    img.src = project.image;
-    img.alt = ''; // The adjacent project title names this link.
-    img.loading = index < 2 ? 'eager' : 'lazy';
+    img.src = src;
+    img.alt = ''; // The caption names this link.
+    img.loading = index < 3 ? 'eager' : 'lazy';
     img.decoding = 'async';
     img.addEventListener('error', () => img.replaceWith(element('div', 'project-placeholder', project.medium)), { once: true });
     media.append(img);
   } else media.append(element('div', 'project-placeholder', project.medium));
-  card.append(heading, summary, media);
+  const caption = element('div', 'project-caption');
+  caption.append(element('p', 'project-year', project.year), element('h2', 'project-title', project.title));
+  const line = project.caption || project.medium;
+  if (line) caption.append(element('p', 'project-medium', line));
+  card.append(media, caption);
   grid.append(card);
   return { card, categories: projectCategories[project.id] || [] };
 });

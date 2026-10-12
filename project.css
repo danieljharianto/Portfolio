@@ -1,5 +1,5 @@
-﻿/* Detail pages share the homepage's grid, margins, colors, and SF Pro family. */
-.detail-toolbar { display: flex; justify-content: space-between; gap: 24px; margin-top: 64px; margin-bottom: 22px; font-size: 18px; font-weight: 700; line-height: 1.1; }
+﻿/* Detail pages share the homepage's grid, margins, colors, and type family (typography.css). */
+.detail-toolbar { display: flex; justify-content: flex-end; gap: 24px; font-size: 18px; font-weight: 700; }
 .detail-toolbar a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .detail-layout { display: grid; grid-template-columns: var(--project-columns); gap: var(--gutter); align-items: start; border-top: 1px solid var(--line); padding-top: 10px; }
 .detail-layout > * { min-width: 0; }
@@ -42,7 +42,7 @@
   .detail-media { grid-column: 2; grid-row: 1 / span 2; }
 }
 @media (max-width: 600px) {
-  .detail-toolbar { margin-top: 36px; font-size: 16px; }
+  .detail-toolbar { font-size: 16px; }
   .detail-layout { grid-template-columns: 1fr; gap: 28px; }
   .detail-heading, .detail-overview, .detail-media { grid-column: auto; grid-row: auto; }
   .detail-metadata { display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; }

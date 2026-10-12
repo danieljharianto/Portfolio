@@ -1,36 +1,32 @@
-﻿/* Shared SF Pro family for every portfolio page. */
+﻿/* Type follows kaizhang.io: Neue Montreal for text, IBM Plex Mono for small labels.
+   Neue Montreal (Pangram Pangram) is licensed separately and is not bundled here; it is used when
+   installed locally or when its .woff2 files are added to fonts/ and listed below. Otherwise text
+   falls back to Helvetica Neue / Helvetica / Arial. IBM Plex Mono loads from Google Fonts. */
 @font-face {
-  font-family: 'SF Pro';
-  src: local('SF Pro Text Regular'), local('SFProText-Regular'), local('SF Pro Display Regular'), local('SFProDisplay-Regular');
+  font-family: 'Neue Montreal';
+  src: local('PP Neue Montreal Regular'), local('PPNeueMontreal-Regular'), local('Neue Montreal Regular'), local('NeueMontreal-Regular');
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'SF Pro';
-  src: local('SF Pro Text Medium'), local('SFProText-Medium'), local('SF Pro Display Medium'), local('SFProDisplay-Medium');
+  font-family: 'Neue Montreal';
+  src: local('PP Neue Montreal Medium'), local('PPNeueMontreal-Medium'), local('Neue Montreal Medium'), local('NeueMontreal-Medium');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'SF Pro';
-  src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), local('SF Pro Display Semibold'), local('SFProDisplay-Semibold');
+  font-family: 'Neue Montreal';
+  src: local('PP Neue Montreal SemiBold'), local('PPNeueMontreal-SemiBold'), local('Neue Montreal Semibold'), local('NeueMontreal-Semibold'), local('PP Neue Montreal Bold'), local('PPNeueMontreal-Bold');
   font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'SF Pro';
-  src: local('SF Pro Text Bold'), local('SFProText-Bold'), local('SF Pro Display Bold'), local('SFProDisplay-Bold');
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600 700;
   font-display: swap;
 }
 :root {
-  --font-body: 'SF Pro', sans-serif;
+  --font-body: 'Neue Montreal', 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
   --font-display: var(--font-body);
-  --mono: var(--font-body);
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 html, body, button, input, select, textarea {
   font-family: var(--font-body);
