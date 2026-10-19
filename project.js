@@ -49,7 +49,7 @@ if (p.video) {
 document.getElementById('projectIntroSection').innerHTML = `
   <div class="project-intro-overview">
     ${p.highlight ? `<p class="project-overview-highlight">${p.highlight}</p>` : ''}
-    <p>${p.long || p.desc || ''}</p>
+    ${Array.isArray(p.long) ? p.long.map(para => `<p>${para}</p>`).join('') : `<p>${p.long || p.desc || ''}</p>`}
   </div>
 `;
 
