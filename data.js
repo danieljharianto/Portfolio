@@ -204,7 +204,7 @@ const projects = [
         title: "The Controller",
         text: "The main controller houses an ESP32 board, a rotary encoder for selecting the music genre, LED indicators, and four pull chains, each linked to one tapping figure through a 3.5mm audio jack.",   
         reverse: false,
-        layout: "feature"
+        layout: "single"
       },
       {
         layout: "full",
@@ -222,7 +222,7 @@ const projects = [
         title: "AI-Generated Rhythms",
         text: "Six genre options, pop, Latin, jazz, rock, funk, and R&B, are each translated into a binary pattern for hi-hat, snare, kick, and drum, assigning every object a role in the beat.",   
         reverse: true,
-        layout: "feature"
+        layout: "single"
       },
       {
         layout: "full",
@@ -264,7 +264,7 @@ const projects = [
         title: "Next Steps",
         text: "Working in parallel on physical form and software meant failing often and learning quickly. The next version moves to wireless figures and a custom PCB for a more compact, cleaner build.",   
         reverse: false,
-        layout: "feature"
+        layout: "single"
       },
     ],
   },
