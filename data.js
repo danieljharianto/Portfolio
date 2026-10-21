@@ -1,5 +1,73 @@
 const projects = [
     {
+    id: "22",
+    title: "TinBot",
+    italicWord: "Bot",
+    tags: ["Modular Robotics", "Digital Fabrication", "Electronics"],
+    desc: "A modular reconfigurable robot made of identical magnetic modules, each a servo-driven rotating joint, that fold, stack, and reshape into different structures.",
+    caption: "Modular reconfigurable robot @ MIT",
+    highlight: "TinBot is a modular reconfigurable robot built from identical units instead of one fixed body. Each module is split into two halves that rotate against each other, carries its own servo and microcontroller, and attaches to its neighbors with magnets, so the same set of pieces can fold, stack, and reshape into different structures.",
+    long: [
+      "I am interested in objects that are not fixed to one form. Instead of designing a single shape, TinBot designs a unit that can be repeated, connected, and rearranged, so the form emerges from how the pieces are combined. Like EPFL's Roombots, each module works as a rotating joint; like MIT's M-Blocks, it connects with magnets instead of motorized latches, which keeps the module simple, cheap, and small enough to print.",
+    ],
+    year: "2026",
+    medium: "Modular Robotics / Digital Fabrication",
+    image: "Image/Project_20/01_DH_Proj20.jpg",
+    location: "Cambridge, MA",
+    status: "Ongoing",
+    color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
+    images: [
+      {
+        layout: "full",
+        src: "Image/Project_20/02_DH_Proj20.mp4",
+        title: "Reconfiguration",
+        text: "The same set of modules can become a compact cluster, a tower, or something in between. The simulation shows how a group of modules transforms from one configuration to another.",
+      },
+      { src: "Image/Project_20/03_DH_Proj20.jpg",
+        title: "Module",
+        text: "Each rounded module is split into two halves that rotate against each other, with magnets on its faces to attach to its neighbors. Inside, a motor drives a rotating plate, so every module becomes a small joint in a larger body.",
+        reverse: false,
+        layout: "single"
+      },
+      {
+        layout: "duo",
+        srcs: [
+          "Image/Project_20/04_DH_Proj20.jpg",
+          "Image/Project_20/05_DH_Proj20.mp4",
+        ],
+        title: "First Prototype",
+        text: "The first modules were 3D printed with magnet pockets on their faces and rearranged by hand to test the connections and the range of configurations.",
+      },
+      {
+        layout: "duo",
+        srcs: [
+          "Image/Project_20/06_DH_Proj20.jpg",
+          "Image/Project_20/07_DH_Proj20.jpg",
+        ],
+        title: "Module Casing",
+        text: "Each module half combines a base plate that holds a micro servo at its center with a lattice shell that closes over it, leaving round openings for the magnets.",
+      },
+      { src: "Image/Project_20/08_DH_Proj20.jpg",
+        title: "Milled Board",
+        text: "The servo board was milled from single-sided copper stock and soldered with a Seeed Studio XIAO ESP32-S3, whose built-in Wi-Fi and Bluetooth will later let the modules communicate, a push button, a status LED, and the servo header.",
+        reverse: true,
+        layout: "single"
+      },
+      {
+        layout: "full",
+        src: "Image/Project_20/09_DH_Proj20.mp4",
+        title: "Articulation",
+        text: "With the servo and board inside, one half of the module rotates against the other, and two modules attached with magnets bend into different configurations through the rotating joint.",
+      },
+      { src: "Image/Project_20/10_DH_Proj20.jpg",
+        title: "Next Steps",
+        text: "The next iterations move to a wireless board so each module can be controlled without a cable, test the joint under load, and fit the board, motor, wiring, and magnets inside a single module.",
+        reverse: true,
+        layout: "single"
+      },
+    ],
+    },
+    {
     id: "19",
     title: "Eaton Fire Ash & Dust",
     italicWord: "Aftermath",

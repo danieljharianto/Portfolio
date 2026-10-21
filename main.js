@@ -1,5 +1,6 @@
 ﻿// Categories reflect the subject of each existing project; a project can span disciplines.
 const projectCategories = {
+  '22': ['architecture', 'computation'],
   '19': ['urbanism', 'computation'],
   '02': ['computation'],
   '03': ['computation'],
