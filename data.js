@@ -54,8 +54,12 @@ const projects = [
         layout: "single"
       },
       {
-        layout: "full",
-        src: "Image/Project_20/09_DH_Proj20.mp4",
+        layout: "feature",
+        srcs: [
+          "Image/Project_20/09_DH_Proj20_1.mp4",
+          "Image/Project_20/09_DH_Proj20_2.mp4",
+          "Image/Project_20/09_DH_Proj20_3.mp4",
+        ],
         title: "Articulation",
         text: "With the servo and board inside, one half of the module rotates against the other, and two modules attached with magnets bend into different configurations through the rotating joint.",
       },
