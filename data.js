@@ -18,18 +18,6 @@ const projects = [
     color: "linear-gradient(135deg, #3d4e1f 0%, #2c3816 100%)",
     images: [
       {
-        layout: "full",
-        src: "Image/Project_20/02_DH_Proj20.mp4",
-        title: "Reconfiguration",
-        text: "The same set of modules can become a compact cluster, a tower, or something in between. The simulation shows how a group of modules transforms from one configuration to another.",
-      },
-      { src: "Image/Project_20/03_DH_Proj20.jpg",
-        title: "Module",
-        text: "Each rounded module is split into two halves that rotate against each other, with magnets on its faces to attach to its neighbors. Inside, a motor drives a rotating plate, so every module becomes a small joint in a larger body.",
-        reverse: false,
-        layout: "single"
-      },
-      {
         layout: "duo",
         srcs: [
           "Image/Project_20/04_DH_Proj20.jpg",
@@ -63,9 +51,36 @@ const projects = [
         title: "Articulation",
         text: "With the servo and board inside, one half of the module rotates against the other, and two modules attached with magnets bend into different configurations through the rotating joint.",
       },
+      {
+        layout: "full",
+        src: "Image/Project_20/11_DH_Proj20.mp4",
+        title: "Smaller Modules",
+        text: "The modules were made smaller and connected to one power supply instead of a battery in each module. The smaller, lighter modules put less load on each joint, so the servo no longer has to work beyond its torque. Three of the new lattice modules were tested side by side, each one rotating its joint.",
+      },
+      {
+        layout: "duo",
+        srcs: [
+          "Image/Project_20/12_DH_Proj20_1.jpg",
+          "Image/Project_20/12_DH_Proj20_2.jpg",
+        ],
+        title: "Stacked Arm",
+        text: "The printed lattice modules stack into an arm on a cluster of base modules, with the servo wires running down through the modules and the upper joints bending the arm.",
+      },
+      {
+        layout: "full",
+        src: "Image/Project_20/13_DH_Proj20.mp4",
+        title: "Arm Simulation",
+        text: "The simulation shows the active modules stacked on a cluster of base modules, rotating their joints one after another so the arm bends, rises, and folds as a single body.",
+      },
+      {
+        layout: "full",
+        src: "Image/Project_20/14_DH_Proj20.jpg",
+        title: "System Design",
+        text: "The final project is an arm of 4 modules with an electromagnet at the tip. The master XIAO in the fixed base module takes a command from the laptop and sends the target angles over ESP-NOW to the receivers in the active modules. Each receiver ramps its servo toward the target and reads the feedback to check the pose. Once the arm reaches the passive module, module 4 switches on its electromagnet, lifts the passive module, carries it to a pedestal, and releases it. If the pick-up fails, the arm repeats the pose. One 5V power supply runs all modules through a wire chained from module to module.",
+      },
       { src: "Image/Project_20/10_DH_Proj20.jpg",
         title: "Next Steps",
-        text: "The next iterations move to a wireless board so each module can be controlled without a cable, test the joint under load, and fit the board, motor, wiring, and magnets inside a single module.",
+        text: "The next steps are to mill the master and servo boards, calibrate the servos for smooth motion, and test picking up the passive module with the electromagnet, so the arm can pick it up and place it on a pedestal on its own.",
         reverse: true,
         layout: "single"
       },
